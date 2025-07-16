@@ -154,7 +154,7 @@ class AnimationsManager {
         
         if (mobileMenuBtn) {
             mobileMenuBtn.classList.add('active');
-            mobileMenuBtn.innerHTML = '✕';
+            mobileMenuBtn.textContent = '✕';
         }
     }
 
@@ -169,7 +169,7 @@ class AnimationsManager {
         
         if (mobileMenuBtn) {
             mobileMenuBtn.classList.remove('active');
-            mobileMenuBtn.innerHTML = '☰';
+            mobileMenuBtn.textContent = '☰';
         }
     }
 

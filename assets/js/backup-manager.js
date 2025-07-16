@@ -28,7 +28,7 @@ class BackupManager {
         const container = document.getElementById('backup-section');
         if (!container) return;
         
-        container.innerHTML = `
+        const interfaceHtml = `
             <div class="backup-manager">
                 <div class="backup-header">
                     <h3>Gestion des sauvegardes</h3>
@@ -51,6 +51,7 @@ class BackupManager {
                 </div>
             </div>
         `;
+        HTMLSanitizer.setHTML(container, interfaceHtml);
     }
     
     setupEventListeners() {
@@ -169,7 +170,7 @@ class BackupManager {
         const container = document.getElementById('backup-stats');
         if (!container) return;
         
-        container.innerHTML = `
+        const statsHtml = `
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-value">${stats.total_backups}</div>
@@ -189,6 +190,7 @@ class BackupManager {
                 </div>
             </div>
         `;
+        HTMLSanitizer.setHTML(container, statsHtml);
     }
     
     renderBackupList() {
@@ -196,23 +198,25 @@ class BackupManager {
         if (!container) return;
         
         if (this.backups.length === 0) {
-            container.innerHTML = `
+            const emptyStateHtml = `
                 <div class="empty-state">
                     <div class="empty-icon">📦</div>
                     <div class="empty-text">Aucune sauvegarde disponible</div>
                     <div class="empty-subtext">Créez votre première sauvegarde</div>
                 </div>
             `;
+            HTMLSanitizer.setHTML(container, emptyStateHtml);
             return;
         }
         
         const backupItems = this.backups.map(backup => this.createBackupItem(backup)).join('');
         
-        container.innerHTML = `
+        const listHtml = `
             <div class="backup-items">
                 ${backupItems}
             </div>
         `;
+        HTMLSanitizer.setHTML(container, listHtml);
         
         // Ajouter les event listeners aux boutons
         this.setupBackupItemListeners();
@@ -551,9 +555,9 @@ const backupStyles = `
 
 // Injecter les styles
 if (!document.querySelector('#backup-styles')) {
-    const styleElement = document.createElement('div');
+    const styleElement = document.createElement('style');
     styleElement.id = 'backup-styles';
-    styleElement.innerHTML = backupStyles;
+    styleElement.textContent = backupStyles.replace(/<\/?style>/g, ''); // Remove style tags
     document.head.appendChild(styleElement);
 }
 

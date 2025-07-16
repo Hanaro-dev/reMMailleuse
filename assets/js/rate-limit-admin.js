@@ -471,7 +471,7 @@ class RateLimitAdmin {
             </div>
         `;
         
-        container.innerHTML = html;
+        HTMLSanitizer.setHTML(container, html);
     }
     
     renderDetailedReport(data) {
@@ -556,7 +556,7 @@ class RateLimitAdmin {
             </div>
         `;
         
-        container.innerHTML = html;
+        HTMLSanitizer.setHTML(container, html);
     }
     
     displayIPStats(data) {
@@ -611,7 +611,7 @@ class RateLimitAdmin {
             </div>
         `;
         
-        container.innerHTML = html;
+        HTMLSanitizer.setHTML(container, html);
     }
     
     async getCSRFToken() {
@@ -644,7 +644,8 @@ class RateLimitAdmin {
     
     showLoading() {
         const container = document.getElementById('rate-limit-content');
-        container.innerHTML = '<div class="loading">Chargement...</div>';
+        HTMLSanitizer.setText(container, 'Chargement...');
+        container.className = 'loading';
     }
     
     hideLoading() {

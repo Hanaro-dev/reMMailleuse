@@ -144,7 +144,7 @@ class LazyLoader {
      */
     setupComponentPlaceholder(component) {
         if (!component.innerHTML.trim()) {
-            component.innerHTML = this.getComponentPlaceholder();
+            HTMLSanitizer.setHTML(component, this.getComponentPlaceholder());
         }
         
         component.style.opacity = '0';
@@ -366,7 +366,7 @@ class LazyLoader {
             </div>
         `;
         
-        component.innerHTML = galleryHtml;
+        HTMLSanitizer.setHTML(component, galleryHtml);
         
         // Réobserver les nouvelles images
         this.observeNewImages(component);
@@ -406,7 +406,7 @@ class LazyLoader {
             </div>
         `;
         
-        component.innerHTML = formHtml;
+        HTMLSanitizer.setHTML(component, formHtml);
         
         // Initialiser le formulaire
         this.initializeContactForm(component);
@@ -417,12 +417,14 @@ class LazyLoader {
      */
     async loadPriceCalculatorComponent(component, data) {
         // Implémentation du calculateur de prix
-        component.innerHTML = '<div class="price-calculator">Calculateur de prix chargé</div>';
+        HTMLSanitizer.setText(component, 'Calculateur de prix chargé');
+        component.className = 'price-calculator';
     }
     
     async loadTestimonialsComponent(component, data) {
         // Implémentation des témoignages
-        component.innerHTML = '<div class="testimonials">Témoignages chargés</div>';
+        HTMLSanitizer.setText(component, 'Témoignages chargés');
+        component.className = 'testimonials';
     }
     
     /**
@@ -452,7 +454,7 @@ class LazyLoader {
         component.classList.remove('lazy-loading');
         component.classList.add('lazy-error');
         
-        component.innerHTML = `
+        const errorHtml = `
             <div class="component-error">
                 <p>Erreur de chargement du composant</p>
                 <button onclick="this.parentElement.parentElement.dispatchEvent(new CustomEvent('retry'))">
@@ -460,6 +462,7 @@ class LazyLoader {
                 </button>
             </div>
         `;
+        HTMLSanitizer.setHTML(component, errorHtml);
         
         component.style.opacity = '1';
         

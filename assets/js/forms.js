@@ -76,17 +76,18 @@ class FormsManager {
         });
 
         if (!filePreview) return;
-        filePreview.innerHTML = '';
+        filePreview.textContent = '';
 
         validFiles.forEach(file => {
             const reader = new FileReader();
             reader.onload = (e) => {
                 const previewItem = document.createElement('div');
                 previewItem.className = 'file-preview-item';
-                previewItem.innerHTML = `
+                const previewHtml = `
                     <img src="${e.target.result}" alt="${file.name}">
                     <button class="file-remove" onclick="this.parentElement.remove()">×</button>
                 `;
+                HTMLSanitizer.setHTML(previewItem, previewHtml);
                 filePreview.appendChild(previewItem);
             };
             reader.readAsDataURL(file);
@@ -192,7 +193,7 @@ class FormsManager {
             e.target.reset();
             
             const filePreview = document.getElementById('file-preview');
-            if (filePreview) filePreview.innerHTML = '';
+            if (filePreview) filePreview.textContent = '';
             
         } catch (error) {
             // Erreur envoi formulaire
@@ -271,7 +272,7 @@ class FormsManager {
         if (form) {
             form.reset();
             const filePreview = form.querySelector('#file-preview');
-            if (filePreview) filePreview.innerHTML = '';
+            if (filePreview) filePreview.textContent = '';
         }
     }
 

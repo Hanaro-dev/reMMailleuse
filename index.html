@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remmailleuse - L'art de redonner vie à vos tissus</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Artisane spécialisée en remaillage traditionnel. Réparation invisible de pulls, bas de contention et tissus délicats en Suisse et France.">
     <meta name="keywords" content="remaillage, réparation tissus, lainages, tricots, bas contention, artisan, Suisse, France">
     <meta name="author" content="Mme Monod - Remmailleuse">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Remmailleuse - L'art de redonner vie à vos tissus">
     <meta property="og:description" content="Artisane spécialisée en remaillage traditionnel depuis plus de 20 ans">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://votre-domaine.com">
-    
+    <meta property="og:url" content="https://remailleuse.balam-web.fr">
+
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/icons/icon-192.png">
-    
+
     <!-- Preload Critical Resources -->
     <link rel="preload" href="assets/fonts/inter-regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/fonts/playfair-regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="data/content.json" as="fetch" crossorigin>
-    
+
     <!-- Google Fonts Fallback -->
     <!-- Google Fonts avec préconnexion -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Audiowide&display=swap" rel="stylesheet">
-    
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    
+
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#D4896B">
 </head>
 <body>
-    
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -47,7 +47,7 @@
                 <div class="logo" id="site-logo">
                     <span class="logo-re">re</span><span class="logo-m">M</span><span class="logo-mailleuse">mailleuse</span>
                 </div>
-                
+
                 <!-- Menu desktop -->
                 <ul class="nav-menu desktop-menu">
                     <li><a href="#expertise" class="nav-link">Expertise</a></li>
@@ -55,7 +55,7 @@
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                
+
                 <!-- Bouton menu mobile -->
                 <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu mobile">
                     <span class="hamburger-line"></span>
@@ -64,7 +64,7 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Menu mobile -->
         <div class="mobile-menu" id="mobile-menu">
             <div class="mobile-menu-header">
@@ -97,7 +97,7 @@
                 <p>Depuis 2015</p>
             </div>
         </div>
-        
+
         <!-- Overlay pour le menu mobile -->
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
     </nav>
@@ -108,7 +108,7 @@
             <div class="hero-content">
                 <div class="hero-text scroll-reveal">
                     <h1 id="hero-title">L'art de <span class="text-gradient">redonner vie</span> à vos tissus précieux</h1>
-                    <p id="hero-subtitle">Remaillage traditionnel & réparation invisible depuis plus de 20 ans</p>
+                    <p id="hero-subtitle">Remaillage traditionnel &amp; réparation invisible depuis plus de 20 ans</p>
                     <button class="btn btn-primary" id="hero-cta">
                         <span id="hero-cta-text">Découvrir mon savoir-faire</span>
                         <span class="btn-arrow">→</span>
@@ -139,7 +139,7 @@
     <section id="expertise" class="section expertise">
         <div class="container">
             <h2 class="section-title scroll-reveal">Mon <span class="text-gradient">Expertise</span></h2>
-            
+
             <div class="expertise-intro scroll-reveal">
                 <div class="portrait">
                     <img src="assets/images/profile/portrait-mme-monod.jpg" alt="Portrait de Mme Monod" loading="lazy">
@@ -164,7 +164,7 @@
     <section id="galerie" class="section gallery">
         <div class="container">
             <h2 class="section-title scroll-reveal">Mes <span class="text-gradient">Réalisations</span></h2>
-            
+
             <div class="gallery-filters scroll-reveal" id="gallery-filters">
                 <!-- Les filtres seront chargés dynamiquement -->
             </div>
@@ -199,14 +199,14 @@
     <section id="services" class="section services">
         <div class="container">
             <h2 class="section-title scroll-reveal">Services & <span class="text-gradient">Tarifs</span></h2>
-            
+
             <div class="services-grid" id="services-grid">
                 <!-- Les services seront chargés dynamiquement -->
             </div>
 
             <div class="price-calculator scroll-reveal">
                 <h3 class="calculator-title">Estimez le coût de votre réparation</h3>
-                
+
                 <form class="calculator-form" id="price-calculator-form">
                     <select id="garment-type" class="form-input" required>
                         <option value="">Type de vêtement</option>
@@ -215,7 +215,7 @@
                         <option value="robe">Robe</option>
                         <option value="autre">Autre</option>
                     </select>
-                    
+
                     <select id="damage-type" class="form-input" required>
                         <option value="">Type de dommage</option>
                         <option value="mite">Trou de mite</option>
@@ -223,12 +223,12 @@
                         <option value="usure">Usure</option>
                         <option value="autre">Autre</option>
                     </select>
-                    
+
                     <input type="text" id="damage-size" placeholder="Taille (cm)" class="form-input">
-                    
+
                     <button type="submit" class="btn btn-primary">Obtenir une estimation</button>
                 </form>
-                
+
                 <div class="estimate-result" id="estimate-result" style="display: none;">
                     <div class="estimate-price"></div>
                     <div class="estimate-note">Pour un devis précis, merci d'envoyer des photos via le formulaire de contact.</div>
@@ -241,7 +241,7 @@
     <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title scroll-reveal"><span class="text-gradient">Contact</span></h2>
-            
+
             <div class="contact-content">
                 <div class="contact-info scroll-reveal" id="contact-info">
                     <!-- Les informations de contact seront chargées dynamiquement -->
@@ -249,7 +249,7 @@
 
                 <form class="contact-form scroll-reveal" id="contact-form">
                     <h3 class="form-title">Demande de devis</h3>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label" for="contact-firstname">Prénom *</label>
@@ -260,7 +260,7 @@
                             <input type="text" id="contact-lastname" name="lastname" required class="form-input">
                         </div>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label" for="contact-email">Email *</label>
@@ -271,12 +271,12 @@
                             <input type="tel" id="contact-phone" name="phone" class="form-input">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="form-label" for="contact-message">Description du problème *</label>
                         <textarea id="contact-message" name="message" required class="form-input form-textarea" placeholder="Décrivez le type de vêtement et les dommages à réparer..."></textarea>
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="file-upload" id="file-upload">
                             <div class="file-upload-icon">📸</div>
@@ -286,7 +286,7 @@
                         </div>
                         <div class="file-preview" id="file-preview"></div>
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
                         <span class="btn-text">Envoyer ma demande</span>
                         <span class="btn-loading" style="display: none;">Envoi en cours...</span>

@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // Configuration de l'authentification - SÉCURISÉE
 define('ADMIN_USERNAME', 'admin');
 // Hash sécurisé du mot de passe - Production Ready
-// Mot de passe: ReMmailleuse2025!Secure
-define('ADMIN_PASSWORD_HASH', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+// IMPORTANT: Changez ce hash en production avec password_hash()
+define('ADMIN_PASSWORD_HASH', '$2y$10$rS8wqjK.V1IyFqMJF9hQ8uK3JvJnE5ZYN5VyL7jKM8.QWvqFGdX2K');
 
 // Durée de vie de la session en secondes (2 heures)
 define('SESSION_LIFETIME', 7200);

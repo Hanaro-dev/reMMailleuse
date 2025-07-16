@@ -41,12 +41,13 @@ class GalleryManager {
         const container = document.getElementById('gallery-filters');
         if (!container || !categories) return;
 
-        container.innerHTML = categories.map(category => `
+        const filtersHtml = categories.map(category => `
             <button class="filter-btn ${category.active ? 'active' : ''}" 
                     data-category="${category.id}">
                 ${category.name}
             </button>
         `).join('');
+        HTMLSanitizer.setHTML(container, filtersHtml);
 
         // Event listeners pour les filtres
         container.addEventListener('click', (e) => {
@@ -60,7 +61,7 @@ class GalleryManager {
         const container = document.getElementById('gallery-grid');
         if (!container || !items) return;
 
-        container.innerHTML = items.map((item, index) => `
+        const itemsHtml = items.map((item, index) => `
             <div class="gallery-item scroll-reveal" 
                  data-category="${item.category}"
                  data-item-id="${item.id}"
@@ -83,6 +84,7 @@ class GalleryManager {
                 </div>
             </div>
         `).join('');
+        HTMLSanitizer.setHTML(container, itemsHtml);
 
         // Event listeners pour la modal
         container.addEventListener('click', (e) => {

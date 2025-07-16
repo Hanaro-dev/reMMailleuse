@@ -278,11 +278,22 @@ class UIManager {
         notification.className = `notification ${type}`;
         
         const icon = this.getNotificationIcon(type);
-        notification.innerHTML = `
-            <span class="notification-icon">${icon}</span>
-            <span class="notification-message">${message}</span>
-            <button class="notification-close" onclick="this.parentElement.remove()">×</button>
-        `;
+        const iconSpan = document.createElement('span');
+        iconSpan.className = 'notification-icon';
+        iconSpan.textContent = icon;
+        
+        const messageSpan = document.createElement('span');
+        messageSpan.className = 'notification-message';
+        messageSpan.textContent = message;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'notification-close';
+        closeBtn.textContent = '×';
+        closeBtn.onclick = () => notification.remove();
+        
+        notification.appendChild(iconSpan);
+        notification.appendChild(messageSpan);
+        notification.appendChild(closeBtn);
 
         container.appendChild(notification);
 

@@ -11,7 +11,7 @@
 ### 🔐 Authentification
 
 - **Nom d'utilisateur** : `admin`
-- **Mot de passe** : `remmailleuse2024` (à changer en production)
+- **Mot de passe** : Configuré dans `/api/auth.php` (voir section Maintenance)
 
 ## 📁 Structure des Fichiers
 

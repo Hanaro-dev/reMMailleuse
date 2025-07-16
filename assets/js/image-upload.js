@@ -36,7 +36,7 @@ class ImageUploadManager {
     }
     
     createUploadZone() {
-        this.container.innerHTML = `
+        const uploadZoneHtml = `
             <div class="upload-zone" id="upload-zone">
                 <div class="upload-content">
                     <div class="upload-icon">📁</div>
@@ -49,6 +49,7 @@ class ImageUploadManager {
                 <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
             </div>
         `;
+        HTMLSanitizer.setHTML(this.container, uploadZoneHtml);
     }
     
     createPreviewContainer() {
@@ -157,7 +158,7 @@ class ImageUploadManager {
         previewElement.className = 'upload-preview';
         previewElement.id = previewId;
         
-        previewElement.innerHTML = `
+        const previewHtml = `
             <div class="preview-image">
                 <img src="" alt="${file.name}">
                 <div class="preview-overlay">
@@ -172,6 +173,7 @@ class ImageUploadManager {
                 <div class="preview-status">En attente</div>
             </div>
         `;
+        HTMLSanitizer.setHTML(previewElement, previewHtml);
         
         this.previewContainer.appendChild(previewElement);
         
@@ -210,13 +212,13 @@ class ImageUploadManager {
         
         if (this.files.length === 0) {
             uploadText.textContent = 'Ajouter des photos';
-            uploadSubtext.innerHTML = 'Glissez vos images ici ou <span class="upload-link">cliquez pour parcourir</span>';
+            HTMLSanitizer.setHTML(uploadSubtext, 'Glissez vos images ici ou <span class="upload-link">cliquez pour parcourir</span>');
             uploadZone.classList.remove('has-files');
         } else {
             uploadText.textContent = `${this.files.length} image${this.files.length > 1 ? 's' : ''} sélectionnée${this.files.length > 1 ? 's' : ''}`;
-            uploadSubtext.innerHTML = this.files.length < this.options.maxFiles 
+            HTMLSanitizer.setHTML(uploadSubtext, this.files.length < this.options.maxFiles 
                 ? '<span class="upload-link">Ajouter d\'autres images</span>' 
-                : 'Limite atteinte';
+                : 'Limite atteinte');
             uploadZone.classList.add('has-files');
         }
     }
@@ -302,7 +304,7 @@ class ImageUploadManager {
     
     clear() {
         this.files = [];
-        this.previewContainer.innerHTML = '';
+        this.previewContainer.textContent = '';
         this.updateUploadZone();
     }
     
@@ -522,9 +524,9 @@ const uploadStyles = `
 
 // Injecter les styles
 if (!document.querySelector('#upload-styles')) {
-    const styleElement = document.createElement('div');
+    const styleElement = document.createElement('style');
     styleElement.id = 'upload-styles';
-    styleElement.innerHTML = uploadStyles;
+    styleElement.textContent = uploadStyles.replace(/<\/?style>/g, ''); // Remove style tags
     document.head.appendChild(styleElement);
 }
 
