@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remmailleuse - L'art de redonner vie à vos tissus</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Artisane spécialisée en remaillage traditionnel. Réparation invisible de pulls, bas de contention et tissus délicats en Suisse et France.">
+    <meta name="keywords" content="remaillage, réparation tissus, lainages, tricots, bas contention, artisan, Suisse, France">
+    <meta name="author" content="Mme Monod - Remmailleuse">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Remmailleuse - L'art de redonner vie à vos tissus">
+    <meta property="og:description" content="Artisane spécialisée en remaillage traditionnel depuis plus de 20 ans">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-domaine.com">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-192.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/fonts/inter-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="data/content.json" as="fetch" crossorigin>
+    
+    <!-- Google Fonts Fallback -->
+    <!-- Google Fonts avec préconnexion -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Audiowide&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D4896B">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo" id="site-logo">
+                    <span class="logo-re">re</span><span class="logo-m">M</span><span class="logo-mailleuse">mailleuse</span>
+                </div>
+                
+                <!-- Menu desktop -->
+                <ul class="nav-menu desktop-menu">
+                    <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu mobile">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu mobile -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">reMMailleuse</div>
+                <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer le menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="mobile-menu-items">
+                <li><a href="#expertise" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">🧵</span>
+                    <span class="mobile-nav-text">Expertise</span>
+                </a></li>
+                <li><a href="#galerie" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">📸</span>
+                    <span class="mobile-nav-text">Galerie</span>
+                </a></li>
+                <li><a href="#services" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">⚙️</span>
+                    <span class="mobile-nav-text">Services</span>
+                </a></li>
+                <li><a href="#contact" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">📞</span>
+                    <span class="mobile-nav-text">Contact</span>
+                </a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <p>Artisane du remaillage</p>
+                <p>Depuis 2015</p>
+            </div>
+        </div>
+        
+        <!-- Overlay pour le menu mobile -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text scroll-reveal">
+                    <h1 id="hero-title">L'art de <span class="text-gradient">redonner vie</span> à vos tissus précieux</h1>
+                    <p id="hero-subtitle">Remaillage traditionnel & réparation invisible depuis plus de 20 ans</p>
+                    <button class="btn btn-primary" id="hero-cta">
+                        <span id="hero-cta-text">Découvrir mon savoir-faire</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+                <div class="hero-visual scroll-reveal">
+                    <div class="hero-animation">
+                        <svg width="400" height="400" viewBox="0 0 400 400" class="weaving-svg">
+                            <path d="M50,200 Q200,100 350,200 Q200,300 50,200" 
+                                  stroke="currentColor" 
+                                  stroke-width="3" 
+                                  fill="none" 
+                                  class="weave-path weave-path-1"/>
+                            <path d="M200,50 Q300,200 200,350 Q100,200 200,50" 
+                                  stroke="currentColor" 
+                                  stroke-width="3" 
+                                  fill="none" 
+                                  class="weave-path weave-path-2"/>
+                        </svg>
+                        <div class="hero-icon">🧵</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expertise -->
+    <section id="expertise" class="section expertise">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Mon <span class="text-gradient">Expertise</span></h2>
+            
+            <div class="expertise-intro scroll-reveal">
+                <div class="portrait">
+                    <img src="assets/images/profile/portrait-mme-monod.jpg" alt="Portrait de Mme Monod" loading="lazy">
+                    <div class="portrait-fallback">👩‍🔧</div>
+                </div>
+                <div class="intro-text">
+                    <h3 id="expert-name">Mme Monod, Artisane Remmailleuse</h3>
+                    <div id="expert-description">
+                        <p>Passionnée par les techniques traditionnelles de remaillage, je redonne vie à vos tissus et lainages les plus précieux. Mon travail consiste à réparer minutieusement chaque maille avec une loupe et un crochet minuscule, remontant maille par maille les lainages endommagés.</p>
+                        <p>Que ce soit pour refermer un trou de mite avec la plus grande minutie ou effectuer du raccommodage avec ma fidèle machine Elna vintage, j'apporte le plus grand soin à rénover vos tissus à l'identique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-steps" id="process-steps">
+                <!-- Les étapes seront chargées dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section id="galerie" class="section gallery">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Mes <span class="text-gradient">Réalisations</span></h2>
+            
+            <div class="gallery-filters scroll-reveal" id="gallery-filters">
+                <!-- Les filtres seront chargés dynamiquement -->
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Les éléments de galerie seront chargés dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Galerie -->
+    <div class="gallery-modal" id="gallery-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+            <div class="modal-image-container">
+                <img id="modal-image-before" src="#" alt="Avant réparation" style="display: none;">
+                <img id="modal-image-after" src="#" alt="Après réparation" style="display: none;">
+                <div class="image-toggle">
+                    <button id="toggle-before" class="active">Avant</button>
+                    <button id="toggle-after">Après</button>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Services -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Services & <span class="text-gradient">Tarifs</span></h2>
+            
+            <div class="services-grid" id="services-grid">
+                <!-- Les services seront chargés dynamiquement -->
+            </div>
+
+            <div class="price-calculator scroll-reveal">
+                <h3 class="calculator-title">Estimez le coût de votre réparation</h3>
+                
+                <form class="calculator-form" id="price-calculator-form">
+                    <select id="garment-type" class="form-input" required>
+                        <option value="">Type de vêtement</option>
+                        <option value="pull">Pull / Gilet</option>
+                        <option value="bas">Bas / Chaussettes</option>
+                        <option value="robe">Robe</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    
+                    <select id="damage-type" class="form-input" required>
+                        <option value="">Type de dommage</option>
+                        <option value="mite">Trou de mite</option>
+                        <option value="accroc">Accroc</option>
+                        <option value="usure">Usure</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    
+                    <input type="text" id="damage-size" placeholder="Taille (cm)" class="form-input">
+                    
+                    <button type="submit" class="btn btn-primary">Obtenir une estimation</button>
+                </form>
+                
+                <div class="estimate-result" id="estimate-result" style="display: none;">
+                    <div class="estimate-price"></div>
+                    <div class="estimate-note">Pour un devis précis, merci d'envoyer des photos via le formulaire de contact.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title scroll-reveal"><span class="text-gradient">Contact</span></h2>
+            
+            <div class="contact-content">
+                <div class="contact-info scroll-reveal" id="contact-info">
+                    <!-- Les informations de contact seront chargées dynamiquement -->
+                </div>
+
+                <form class="contact-form scroll-reveal" id="contact-form">
+                    <h3 class="form-title">Demande de devis</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-firstname">Prénom *</label>
+                            <input type="text" id="contact-firstname" name="firstname" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-lastname">Nom *</label>
+                            <input type="text" id="contact-lastname" name="lastname" required class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">Téléphone</label>
+                            <input type="tel" id="contact-phone" name="phone" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="contact-message">Description du problème *</label>
+                        <textarea id="contact-message" name="message" required class="form-input form-textarea" placeholder="Décrivez le type de vêtement et les dommages à réparer..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="file-upload" id="file-upload">
+                            <div class="file-upload-icon">📸</div>
+                            <div class="file-upload-text">Ajouter des photos</div>
+                            <div class="file-upload-subtext">Glissez vos images ici ou cliquez pour sélectionner (max 5MB par image)</div>
+                            <input type="file" id="file-input" name="photos" multiple accept="image/*" style="display: none;">
+                        </div>
+                        <div class="file-preview" id="file-preview"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                        <span class="btn-text">Envoyer ma demande</span>
+                        <span class="btn-loading" style="display: none;">Envoi en cours...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footer-title">Remmailleuse</h3>
+                    <p id="footer-description">L'art traditionnel du remaillage pour redonner vie à vos tissus précieux.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Remaillage • Réparation • Raccommodage<br>Tissus • Lainages • Bas de contention</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Zones d'intervention</h3>
+                    <p>Suisse • France<br>Envoi postal possible</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Remmailleuse - Mme Monod. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Chargement...</p>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon"></span>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/csrf.js"></script>
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/animations.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        // SW registered
+                    })
+                    .catch((registrationError) => {
+                        // SW registration failed
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

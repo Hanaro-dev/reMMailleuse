@@ -1,0 +1,67 @@
+{
+  "name": "remmailleuse",
+  "version": "1.0.0",
+  "description": "Site web professionnel pour artisane spécialisée en remaillage",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 8000 -c-1",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o assets/css/main.min.css assets/css/main.css && cleancss -o assets/css/admin.min.css assets/css/admin.css",
+    "minify:js": "terser assets/js/main.js -o assets/js/main.min.js --compress --mangle && terser assets/js/admin.js -o assets/js/admin.min.js --compress --mangle",
+    "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
+    "validate:html": "html-validate index.html admin/index.html admin/login.html 404.html",
+    "validate:css": "stylelint assets/css/*.css",
+    "validate:js": "eslint assets/js/*.js",
+    "optimize:images": "imagemin assets/images/**/*.{jpg,jpeg,png} --out-dir=assets/images/ --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant",
+    "test": "npm run test:php && npm run test:js",
+    "test:php": "cd tests && php -f run-tests.php",
+    "test:js": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "jest --config jest.e2e.config.js",
+    "serve": "http-server -p 8000",
+    "start": "npm run serve",
+    "lint": "npm run validate",
+    "clean": "rm -rf assets/css/*.min.css assets/js/*.min.js"
+  },
+  "keywords": [
+    "remaillage",
+    "reparation",
+    "textile",
+    "artisanat",
+    "suisse",
+    "pwa",
+    "responsive"
+  ],
+  "author": "Remmailleuse - Mme Monod",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.57.0",
+    "html-validate": "^8.7.4",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "stylelint": "^16.2.1",
+    "terser": "^5.27.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "puppeteer": "^21.5.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/votre-compte/remmailleuse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/votre-compte/remmailleuse/issues"
+  },
+  "homepage": "https://remmailleuse.ch"
+}

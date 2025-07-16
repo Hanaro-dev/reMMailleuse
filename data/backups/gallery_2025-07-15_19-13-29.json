@@ -1,0 +1,286 @@
+{
+  "categories": [
+    {
+      "id": "tous",
+      "name": "Tous",
+      "description": "Toutes les réalisations",
+      "active": true,
+      "count": 16
+    },
+    {
+      "id": "remaillage",
+      "name": "Remaillage",
+      "description": "Réparations de tricots et lainages",
+      "active": true,
+      "count": 8
+    },
+    {
+      "id": "bas-contention",
+      "name": "Bas de contention",
+      "description": "Réparations médicales spécialisées",
+      "active": true,
+      "count": 4
+    },
+    {
+      "id": "tissus-precieux",
+      "name": "Tissus précieux",
+      "description": "Cachemire, soie et matières délicates",
+      "active": true,
+      "count": 4
+    }
+  ],
+  "items": [
+    {
+      "id": "remaillage-pull-cachemire-1",
+      "title": "Pull cachemire - Réparation invisible",
+      "description": "Remaillage d'un trou de 2cm sur un pull en cachemire beige. Technique traditionnelle avec assortiment parfait des fibres.",
+      "category": "tissus-precieux",
+      "tags": ["cachemire", "remaillage", "invisible", "premium"],
+      "featured": true,
+      "before_after": true,
+      "images": [
+        {
+          "url": "assets/images/gallery/remaillage-cachemire-avant.jpg",
+          "alt": "Pull cachemire avant réparation - trou visible",
+          "type": "before",
+          "caption": "Avant : trou de 2cm au niveau du coude"
+        },
+        {
+          "url": "assets/images/gallery/remaillage-cachemire-apres.jpg",
+          "alt": "Pull cachemire après réparation - invisible",
+          "type": "after",
+          "caption": "Après : réparation totalement invisible"
+        }
+      ],
+      "fallback_icon": "🧶",
+      "service": "remaillage-fin",
+      "difficulty": "expert",
+      "duration": "5 jours",
+      "material": "Cachemire 100%",
+      "technique": "Remaillage traditionnel sous loupe",
+      "date": "2024-11-15",
+      "client_feedback": "Absolument parfait ! On ne voit rien du tout.",
+      "rating": 5
+    },
+    {
+      "id": "bas-contention-reparation-1",
+      "title": "Bas de contention classe II",
+      "description": "Réparation d'une échelle sur bas de contention médical avec maintien des propriétés de compression.",
+      "category": "bas-contention",
+      "tags": ["médical", "compression", "échelle", "urgence"],
+      "featured": true,
+      "before_after": true,
+      "images": [
+        {
+          "url": "assets/images/gallery/bas-contention-avant.jpg",
+          "alt": "Bas de contention avec échelle",
+          "type": "before",
+          "caption": "Avant : échelle sur 8cm"
+        },
+        {
+          "url": "assets/images/gallery/bas-contention-apres.jpg",
+          "alt": "Bas de contention réparé",
+          "type": "after",
+          "caption": "Après : réparation invisible, compression maintenue"
+        }
+      ],
+      "fallback_icon": "🧦",
+      "service": "bas-contention",
+      "difficulty": "expert",
+      "duration": "2 jours",
+      "material": "Polyamide médical",
+      "technique": "Reprise spécialisée sans altération compression",
+      "date": "2024-10-28",
+      "client_feedback": "Service rapide et efficace, mes bas sont comme neufs !",
+      "rating": 5
+    },
+    {
+      "id": "pull-laine-vintage-1",
+      "title": "Pull en laine vintage années 70",
+      "description": "Restauration d'un pull vintage avec remaillage de plusieurs zones d'usure et renforcement des coutures.",
+      "category": "remaillage",
+      "tags": ["vintage", "laine", "restauration", "multiple-zones"],
+      "featured": false,
+      "before_after": true,
+      "images": [
+        {
+          "url": "assets/images/gallery/vintage-pull-avant.jpg",
+          "alt": "Pull vintage usé",
+          "type": "before",
+          "caption": "Avant : usures multiples et trous"
+        },
+        {
+          "url": "assets/images/gallery/vintage-pull-apres.jpg",
+          "alt": "Pull vintage restauré",
+          "type": "after",
+          "caption": "Après : restauration complète"
+        }
+      ],
+      "fallback_icon": "👕",
+      "service": "remaillage-classique",
+      "difficulty": "intermediate",
+      "duration": "4 jours",
+      "material": "Laine pure",
+      "technique": "Remaillage multiple + renforcement",
+      "date": "2024-10-10",
+      "client_feedback": "Mon pull vintage a retrouvé sa jeunesse !",
+      "rating": 5
+    },
+    {
+      "id": "gilet-mohair-1",
+      "title": "Gilet mohair - Accroc majeur",
+      "description": "Réparation délicate d'un accroc de 5cm sur gilet mohair blanc. Travail minutieux pour respecter la texture.",
+      "category": "tissus-precieux",
+      "tags": ["mohair", "blanc", "délicat", "texture"],
+      "featured": false,
+      "before_after": false,
+      "images": [
+        {
+          "url": "assets/images/gallery/mohair-reparation.jpg",
+          "alt": "Gilet mohair en cours de réparation",
+          "type": "process",
+          "caption": "Réparation en cours sous loupe binoculaire"
+        }
+      ],
+      "fallback_icon": "🦙",
+      "service": "remaillage-fin",
+      "difficulty": "expert",
+      "duration": "6 jours",
+      "material": "Mohair 80% - Soie 20%",
+      "technique": "Remaillage extra-fin sous loupe binoculaire",
+      "date": "2024-09-22",
+      "client_feedback": "Travail d'orfèvre, résultat exceptionnel !",
+      "rating": 5
+    },
+    {
+      "id": "collant-medical-1",
+      "title": "Collant médical anti-thrombose",
+      "description": "Réparation urgente d'un collant anti-thrombose avec technique spécialisée pour maintien thérapeutique.",
+      "category": "bas-contention",
+      "tags": ["anti-thrombose", "urgence", "médical", "thérapeutique"],
+      "featured": false,
+      "before_after": false,
+      "images": [
+        {
+          "url": "assets/images/gallery/collant-medical-detail.jpg",
+          "alt": "Détail réparation collant médical",
+          "type": "detail",
+          "caption": "Technique de réparation préservant les propriétés médicales"
+        }
+      ],
+      "fallback_icon": "🏥",
+      "service": "bas-contention",
+      "difficulty": "expert",
+      "duration": "1 jour",
+      "material": "Polyamide médical graduél",
+      "technique": "Reprise médicale spécialisée",
+      "date": "2024-11-02",
+      "client_feedback": "Réparation parfaite, propriétés thérapeutiques préservées.",
+      "rating": 5
+    },
+    {
+      "id": "echarpe-alpaga-1",
+      "title": "Écharpe alpaga - Fils tirés",
+      "description": "Remise en état d'une écharpe alpaga avec plusieurs fils tirés et début d'effilochage.",
+      "category": "tissus-precieux",
+      "tags": ["alpaga", "fils-tirés", "effilochage", "prévention"],
+      "featured": false,
+      "before_after": false,
+      "images": [
+        {
+          "url": "assets/images/gallery/alpaga-echarpe-proces.jpg",
+          "alt": "Écharpe alpaga en réparation",
+          "type": "process",
+          "caption": "Remise en tension des fils et consolidation"
+        }
+      ],
+      "fallback_icon": "🧣",
+      "service": "remaillage-fin",
+      "difficulty": "intermediate",
+      "duration": "3 jours",
+      "material": "Alpaga 100%",
+      "technique": "Consolidation et remise en tension",
+      "date": "2024-09-15",
+      "client_feedback": "Parfait, mon écharpe est sauvée !",
+      "rating": 5
+    },
+    {
+      "id": "pull-enfant-1",
+      "title": "Pull enfant - Trou au genou",
+      "description": "Remaillage rapide d'un pull enfant avec trou au coude. Réparation solide pour résister aux jeux.",
+      "category": "remaillage",
+      "tags": ["enfant", "rapide", "solide", "quotidien"],
+      "featured": false,
+      "before_after": true,
+      "images": [
+        {
+          "url": "assets/images/gallery/pull-enfant-avant.jpg",
+          "alt": "Pull enfant troué",
+          "type": "before",
+          "caption": "Avant : trou au coude"
+        },
+        {
+          "url": "assets/images/gallery/pull-enfant-apres.jpg",
+          "alt": "Pull enfant réparé",
+          "type": "after",
+          "caption": "Après : réparation renforcée"
+        }
+      ],
+      "fallback_icon": "👶",
+      "service": "remaillage-classique",
+      "difficulty": "basic",
+      "duration": "2 jours",
+      "material": "Laine mélangée",
+      "technique": "Remaillage renforcé",
+      "date": "2024-10-05",
+      "client_feedback": "Réparation solide, parfait pour un enfant actif !",
+      "rating": 4
+    },
+    {
+      "id": "châle-soie-1",
+      "title": "Châle en soie - Restauration délicate",
+      "description": "Restauration d'un châle de soie ancien avec techniques traditionnelles de conservation textile.",
+      "category": "tissus-precieux",
+      "tags": ["soie", "ancien", "conservation", "tradition"],
+      "featured": true,
+      "before_after": false,
+      "images": [
+        {
+          "url": "assets/images/gallery/chale-soie-detail.jpg",
+          "alt": "Détail restauration châle soie",
+          "type": "detail",
+          "caption": "Technique de restauration traditionnelle"
+        }
+      ],
+      "fallback_icon": "🌸",
+      "service": "remaillage-fin",
+      "difficulty": "master",
+      "duration": "8 jours",
+      "material": "Soie naturelle ancienne",
+      "technique": "Restoration textile traditionnelle",
+      "date": "2024-08-20",
+      "client_feedback": "Un véritable trésor familial sauvé avec expertise !",
+      "rating": 5
+    }
+  ],
+  "stats": {
+    "total_items": 8,
+    "featured_count": 3,
+    "categories_count": 4,
+    "average_rating": 4.9,
+    "completion_rate": "100%"
+  },
+  "settings": {
+    "items_per_page": 8,
+    "show_before_after": true,
+    "show_ratings": true,
+    "show_client_feedback": false,
+    "lazy_loading": true,
+    "modal_enabled": true
+  },
+  "meta": {
+    "last_updated": "2025-01-15T12:00:00Z",
+    "version": "1.0",
+    "author": "Développeur site Remmailleuse"
+  }
+}

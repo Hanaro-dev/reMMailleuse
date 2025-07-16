@@ -1,0 +1,357 @@
+{
+  "site": {
+    "name": "Remmailleuse",
+    "tagline": "L'art de redonner vie à vos tissus précieux",
+    "description": "Artisane spécialisée en remaillage traditionnel depuis plus de 20 ans. Réparation invisible de pulls, lainages, bas de contention et tissus délicats en Suisse et France.",
+    "url": "https://votre-domaine.com",
+    "language": "fr",
+    "charset": "UTF-8"
+  },
+  "hero": {
+    "title": "L'art de redonner vie à vos tissus précieux",
+    "subtitle": "Remaillage traditionnel & réparation invisible depuis plus de 20 ans",
+    "description": "Passionnée par les techniques ancestrales, je répare minutieusement vos lainages et tissus les plus précieux avec un savoir-faire unique.",
+    "cta": {
+      "text": "Découvrir mon savoir-faire",
+      "link": "#expertise",
+      "secondary": {
+        "text": "Voir mes réalisations",
+        "link": "#galerie"
+      }
+    },
+    "image": {
+      "url": "assets/images/hero/hero-main.jpg",
+      "alt": "Mains d'artisane remmailleuse au travail avec loupe et crochet",
+      "caption": "Remaillage minutieux maille par maille"
+    },
+    "features": [
+      {
+        "icon": "🔍",
+        "title": "Diagnostic précis",
+        "description": "Analyse minutieuse de chaque pièce"
+      },
+      {
+        "icon": "🧵",
+        "title": "Réparation invisible",
+        "description": "Remaillage traditionnel à l'identique"
+      },
+      {
+        "icon": "✨",
+        "title": "Finition parfaite",
+        "description": "Résultat indétectable à l'œil nu"
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Mon Expertise",
+    "subtitle": "Un savoir-faire traditionnel au service de vos tissus précieux",
+    "intro": {
+      "name": "Mme Monod, Artisane Remmailleuse",
+      "title": "Maître artisane en remaillage traditionnel",
+      "experience": "Plus de 20 ans d'expérience",
+      "specialty": "Spécialiste des techniques ancestrales de remaillage",
+      "description": [
+        "Passionnée par les techniques traditionnelles de remaillage, je redonne vie à vos tissus et lainages les plus précieux. Mon travail consiste à réparer minutieusement chaque maille avec une loupe et un crochet minuscule, remontant maille par maille les lainages endommagés.",
+        "Que ce soit pour refermer un trou de mite avec la plus grande minutie ou effectuer du raccommodage avec ma fidèle machine Elna vintage, j'apporte le plus grand soin à rénover vos tissus à l'identique.",
+        "Formée aux techniques ancestrales, je maîtrise l'art délicat du remaillage invisible qui permet de redonner une seconde vie à vos vêtements les plus chers. Chaque pièce est traitée avec le respect qu'elle mérite."
+      ],
+      "certifications": [
+        "Formation traditionnelle au remaillage artisanal",
+        "Spécialisation en tissus délicats et lainages de luxe",
+        "Maîtrise des techniques de stoppage et raccommodage"
+      ]
+    },
+    "process": [
+      {
+        "step": 1,
+        "icon": "🔍",
+        "title": "Diagnostic minutieux",
+        "description": "Analyse complète de la pièce pour déterminer la meilleure technique de réparation selon le type de tissu, la nature du dommage et l'origine du vêtement",
+        "duration": "15-30 minutes",
+        "details": [
+          "Identification du type de maille et de fil",
+          "Évaluation de l'étendue des dégâts",
+          "Choix de la technique adaptée",
+          "Estimation du temps de réparation"
+        ]
+      },
+      {
+        "step": 2,
+        "icon": "🧵",
+        "title": "Remaillage traditionnel",
+        "description": "Reconstruction maille par maille avec loupe et outils traditionnels. Chaque fil est remis en place selon la technique originale du tricot",
+        "duration": "1-4 heures selon complexité",
+        "details": [
+          "Préparation des fils de raccord",
+          "Remontage maille par maille sous loupe",
+          "Respect du sens et de la tension d'origine",
+          "Intégration parfaite dans la trame existante"
+        ]
+      },
+      {
+        "step": 3,
+        "icon": "✨",
+        "title": "Finition invisible",
+        "description": "Réparation parfaitement invisible qui redonne une seconde vie à votre vêtement. La zone réparée est indétectable à l'œil nu",
+        "duration": "30 minutes - 1 heure",
+        "details": [
+          "Ajustement final des tensions",
+          "Égalisation des mailles",
+          "Contrôle qualité minutieux",
+          "Pressing délicat si nécessaire"
+        ]
+      }
+    ],
+    "specialties": [
+      {
+        "name": "Lainages de luxe",
+        "description": "Cachemire, alpaga, mohair, laine vierge",
+        "icon": "🧥"
+      },
+      {
+        "name": "Bas et collants",
+        "description": "Bas de contention, collants fins, chaussettes",
+        "icon": "🧦"
+      },
+      {
+        "name": "Tricots délicats", 
+        "description": "Dentelles, crochet, tricots ajourés",
+        "icon": "🕸️"
+      },
+      {
+        "name": "Pièces vintage",
+        "description": "Vêtements anciens, pièces de collection",
+        "icon": "👗"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Loupe professionnelle",
+        "description": "Grossissement x3 pour un travail de précision"
+      },
+      {
+        "name": "Crochets miniatures",
+        "description": "Différentes tailles pour tous types de mailles"
+      },
+      {
+        "name": "Machine Elna vintage",
+        "description": "Spécialement adaptée aux bas de contention"
+      },
+      {
+        "name": "Fils assortis",
+        "description": "Large gamme pour parfait raccordement"
+      }
+    ]
+  },
+  "about": {
+    "story": {
+      "title": "Mon histoire",
+      "content": "Passionnée par les arts textiles depuis mon enfance, j'ai appris les techniques traditionnelles de remaillage auprès d'artisanes expérimentées. Ce savoir-faire ancestral, qui tend à disparaître, mérite d'être préservé et transmis.",
+      "mission": "Donner une seconde vie aux vêtements précieux plutôt que de les jeter",
+      "vision": "Préserver les techniques artisanales traditionnelles pour les générations futures"
+    },
+    "values": [
+      {
+        "name": "Qualité artisanale",
+        "description": "Chaque pièce est traitée avec le plus grand soin"
+      },
+      {
+        "name": "Respect du patrimoine",
+        "description": "Préservation des techniques ancestrales"
+      },
+      {
+        "name": "Développement durable",
+        "description": "Réparer plutôt que jeter"
+      },
+      {
+        "name": "Service personnalisé",
+        "description": "Accompagnement et conseil pour chaque client"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "N'hésitez pas à me faire parvenir vos demandes de devis",
+    "addresses": [
+      {
+        "country": "🇨🇭",
+        "flag": "CH",
+        "title": "Suisse",
+        "name": "Atelier principal",
+        "address": "Chemin des Clavins 3",
+        "city": "2108 Couvet",
+        "region": "Canton de Neuchâtel",
+        "postal_code": "2108",
+        "country_name": "Suisse",
+        "primary": true
+      },
+      {
+        "country": "🇫🇷", 
+        "flag": "FR",
+        "title": "France",
+        "name": "Point de correspondance",
+        "address": "Poste restante, 17 Rue de Franche Comté",
+        "city": "25300 Verrières-de-Joux",
+        "region": "Bourgogne-Franche-Comté",
+        "postal_code": "25300",
+        "country_name": "France",
+        "primary": false,
+        "note": "Pour les clients français uniquement"
+      }
+    ],
+    "phones": [
+      {
+        "number": "+41 32.863.15.31",
+        "type": "Fixe",
+        "country": "CH",
+        "primary": true,
+        "hours": "8h-18h du lundi au vendredi"
+      },
+      {
+        "number": "+41 79.636.23.22",
+        "type": "Mobile",
+        "country": "CH", 
+        "primary": false,
+        "hours": "Urgences et week-end"
+      }
+    ],
+    "email": {
+      "primary": "contact@remmailleuse.com",
+      "response_time": "24h maximum",
+      "languages": ["français", "allemand"]
+    },
+    "hours": {
+      "workshop": {
+        "monday": "8h00 - 17h00",
+        "tuesday": "8h00 - 17h00", 
+        "wednesday": "8h00 - 17h00",
+        "thursday": "8h00 - 17h00",
+        "friday": "8h00 - 16h00",
+        "saturday": "Sur rendez-vous",
+        "sunday": "Fermé"
+      },
+      "phone": {
+        "weekdays": "8h00 - 18h00",
+        "weekend": "Urgences uniquement"
+      },
+      "note": "Pendant les périodes de forte demande, les délais peuvent être prolongés"
+    },
+    "delays": {
+      "standard": "2 à 5 jours selon la complexité",
+      "urgent": "24-48h (supplément de 50%)",
+      "seasonal_note": "Délais plus longs en automne-hiver (période des mites)",
+      "details": [
+        "Remaillage simple : 1-2 jours",
+        "Trous de mite : 2-3 jours", 
+        "Bas de contention : 1 jour",
+        "Pièces complexes : 3-5 jours",
+        "Restauration vintage : 5-10 jours"
+      ]
+    },
+    "shipping": {
+      "available": true,
+      "methods": [
+        {
+          "name": "Courrier suisse",
+          "price": "Gratuit",
+          "delay": "2-3 jours",
+          "countries": ["CH"]
+        },
+        {
+          "name": "Courrier international",
+          "price": "8 CHF",
+          "delay": "5-7 jours", 
+          "countries": ["FR", "DE", "IT", "AT"]
+        }
+      ],
+      "packaging": "Emballage soigné avec protection",
+      "insurance": "Incluse jusqu'à 200 CHF"
+    },
+    "payment": {
+      "methods": [
+        "Espèces (sur place)",
+        "Virement bancaire (IBAN fourni)",
+        "PayPal (frais 3%)",
+        "Facture (clients réguliers)"
+      ],
+      "currency": "CHF (Francs suisses)",
+      "terms": "Paiement à la livraison ou avant expédition"
+    }
+  },
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Marie L.",
+      "location": "Neuchâtel, CH",
+      "rating": 5,
+      "date": "2024-11-15",
+      "text": "Travail absolument remarquable ! Mon pull en cachemire avait un trou de mite important, la réparation est totalement invisible. Un vrai savoir-faire artisanal.",
+      "service": "Remaillage cachemire",
+      "verified": true
+    },
+    {
+      "id": "testimonial-2", 
+      "name": "Jacques M.",
+      "location": "Besançon, FR",
+      "rating": 5,
+      "date": "2024-10-28",
+      "text": "Service impeccable pour mes bas de contention. Mme Monod a redonné une seconde vie à mes bas préférés. Délai respecté et tarif très correct.",
+      "service": "Bas de contention",
+      "verified": true
+    },
+    {
+      "id": "testimonial-3",
+      "name": "Sylvie R.", 
+      "location": "Lausanne, CH",
+      "rating": 5,
+      "date": "2024-10-12",
+      "text": "Restoration parfaite d'un gilet vintage de ma grand-mère. Le travail est d'une finesse exceptionnelle. Je recommande vivement !",
+      "service": "Restauration vintage",
+      "verified": true
+    },
+    {
+      "id": "testimonial-4",
+      "name": "Pierre D.",
+      "location": "Geneva, CH", 
+      "rating": 5,
+      "date": "2024-09-30",
+      "text": "Excellent contact, devis rapide et travail de qualité. Mon pull Hermès est comme neuf après son passage chez Mme Monod.",
+      "service": "Remaillage luxe",
+      "verified": true
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quels types de vêtements pouvez-vous réparer ?",
+      "answer": "Je répare tous types de tricots et lainages : pulls, gilets, robes, écharpes, bas de contention, chaussettes, ainsi que les pièces en cachemire, alpaga, mohair et autres fibres délicates."
+    },
+    {
+      "question": "Combien coûte une réparation ?",
+      "answer": "Les tarifs varient selon la complexité : remaillage simple (15-25 CHF), trous de mite (20-35 CHF), bas de contention (15-20 CHF). Un devis précis est établi après examen de la pièce."
+    },
+    {
+      "question": "Quels sont les délais de réparation ?",
+      "answer": "Généralement 2 à 5 jours selon la complexité. Service express 24-48h disponible avec supplément. Les délais peuvent être plus longs en automne-hiver."
+    },
+    {
+      "question": "Puis-je envoyer mes vêtements par courrier ?",
+      "answer": "Oui, j'accepte les envois postaux. Emballage soigné requis avec description détaillée des dommages. Retour par courrier sécurisé."
+    },
+    {
+      "question": "La réparation sera-t-elle vraiment invisible ?",
+      "answer": "Oui, c'est ma spécialité ! Le remaillage traditionnel permet une réparation parfaitement invisible à l'œil nu. La zone réparée retrouve la souplesse et l'aspect d'origine."
+    },
+    {
+      "question": "Acceptez-vous les pièces très anciennes ?",
+      "answer": "Absolument ! J'ai une expérience particulière avec les vêtements vintage et les pièces de collection. Chaque pièce ancienne mérite une attention particulière."
+    }
+  ],
+  "meta": {
+    "last_updated": "2025-01-15T10:00:00Z",
+    "version": "1.0",
+    "author": "Mme Monod - Remmailleuse",
+    "language": "fr-CH",
+    "content_type": "website_content",
+    "revision": 1
+  }
+}

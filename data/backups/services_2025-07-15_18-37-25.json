@@ -1,0 +1,437 @@
+{
+  "services": [
+    {
+      "id": "remaillage-classique",
+      "name": "Remaillage classique",
+      "icon": "🧵",
+      "category": "remaillage",
+      "description": "Reconstruction maille par maille pour lainages courants",
+      "detailed_description": "Technique traditionnelle de remaillage pour pulls, gilets et vêtements tricotés en laine standard. Réparation invisible qui redonne sa solidité d'origine au vêtement.",
+      "price": {
+        "min": 15,
+        "max": 40,
+        "currency": "CHF",
+        "display": "15-40 CHF",
+        "factors": [
+          "Taille du dommage",
+          "Complexité de la maille", 
+          "Type de laine",
+          "Urgence du délai"
+        ]
+      },
+      "duration": {
+        "min": 2,
+        "max": 4,
+        "unit": "jours",
+        "display": "2-4 jours",
+        "express": "24-48h (+50%)"
+      },
+      "materials": [
+        "Laine classique",
+        "Acrylique",
+        "Mélanges laine-synthétique",
+        "Coton tricoté"
+      ],
+      "techniques": [
+        "Remaillage à l'aiguille",
+        "Reconstitution maille par maille",
+        "Raccordement invisible",
+        "Finition sous loupe"
+      ],
+      "examples": [
+        "Trou dans un pull en laine",
+        "Accroc sur un gilet",
+        "Maille filée sur une manche",
+        "Réparation de bordure effilochée"
+      ],
+      "featured": true,
+      "popular": true
+    },
+    {
+      "id": "trous-mite",
+      "name": "Réparation trous de mite",
+      "icon": "🔍",
+      "category": "specialiste",
+      "description": "Réparation invisible et minutieuse des dégâts de mites",
+      "detailed_description": "Spécialité délicate nécessitant une expertise particulière. Les trous de mites, souvent multiples et de formes irrégulières, demandent une approche spécifique pour une réparation parfaitement invisible.",
+      "price": {
+        "min": 20,
+        "max": 50,
+        "currency": "CHF",
+        "display": "20-50 CHF",
+        "factors": [
+          "Nombre de trous",
+          "Taille des dommages",
+          "Qualité du tissu",
+          "Complexité du motif"
+        ]
+      },
+      "duration": {
+        "min": 2,
+        "max": 6,
+        "unit": "jours",
+        "display": "2-6 jours",
+        "note": "Délais plus longs en automne (saison des mites)"
+      },
+      "materials": [
+        "Cachemire",
+        "Laine fine",
+        "Alpaga",
+        "Mohair",
+        "Tissus délicats"
+      ],
+      "techniques": [
+        "Analyse des dommages multiples",
+        "Stoppage invisible",
+        "Reconstitution fibre par fibre", 
+        "Harmonisation parfaite"
+      ],
+      "prevention_tips": [
+        "Lavage à sec avant rangement",
+        "Utilisation de produits anti-mites naturels",
+        "Stockage dans housses hermétiques",
+        "Inspection régulière des vêtements"
+      ],
+      "seasonal": {
+        "peak_season": "Septembre à Décembre",
+        "reason": "Période d'activité des mites",
+        "delay_increase": "+1-2 jours"
+      },
+      "specialty": true
+    },
+    {
+      "id": "bas-contention",
+      "name": "Bas de contention",
+      "icon": "🧦",
+      "category": "medical",
+      "description": "Raccommodage spécialisé avec machine adaptée",
+      "detailed_description": "Réparation des bas de contention avec machine Elna vintage, spécialement conçue pour ce type de tricot serré. Maintien des propriétés médicales du bas.",
+      "price": {
+        "min": 15,
+        "max": 25,
+        "currency": "CHF",
+        "display": "15-25 CHF",
+        "factors": [
+          "Classe de contention",
+          "Marque du bas",
+          "Zone de réparation",
+          "Urgence médicale"
+        ]
+      },
+      "duration": {
+        "min": 1,
+        "max": 2,
+        "unit": "jours",
+        "display": "1-2 jours",
+        "express": "Même jour si urgent"
+      },
+      "materials": [
+        "Bas de contention classe I",
+        "Bas de contention classe II",
+        "Bas de contention classe III",
+        "Collants de contention",
+        "Chaussettes de compression"
+      ],
+      "techniques": [
+        "Machine Elna spécialisée",
+        "Respect de la tension",
+        "Maintien des propriétés élastiques",
+        "Finition médicale"
+      ],
+      "medical_benefits": [
+        "Préservation de l'efficacité thérapeutique",
+        "Maintien de la compression graduée",
+        "Économie vs remplacement",
+        "Continuité du traitement"
+      ],
+      "brands_accepted": [
+        "Sigvaris",
+        "Jobst",
+        "Thuasne",
+        "Medi",
+        "Bauerfeind",
+        "Autres marques"
+      ],
+      "urgent": true,
+      "medical": true
+    },
+    {
+      "id": "renovation-tissus",
+      "name": "Rénovation tissus délicats",
+      "icon": "✨",
+      "category": "premium",
+      "description": "Restauration minutieuse à l'identique",
+      "detailed_description": "Service premium pour tissus de luxe, pièces vintage ou vêtements de grande valeur. Analyse approfondie et techniques de restauration adaptées à chaque matière.",
+      "price": {
+        "type": "devis",
+        "currency": "CHF",
+        "display": "Sur devis",
+        "base_consultation": 25,
+        "factors": [
+          "Valeur de la pièce",
+          "Rareté du tissu",
+          "Complexité technique",
+          "Temps nécessaire",
+          "Fournitures spéciales"
+        ]
+      },
+      "duration": {
+        "min": 3,
+        "max": 15,
+        "unit": "jours",
+        "display": "3-15 jours",
+        "consultation": "Évaluation préalable obligatoire"
+      },
+      "materials": [
+        "Soie naturelle",
+        "Cachemire haute qualité",
+        "Dentelle ancienne",
+        "Tissus vintage",
+        "Pièces de créateurs",
+        "Vêtements de collection"
+      ],
+      "techniques": [
+        "Analyse textile approfondie",
+        "Techniques de conservation",
+        "Restauration historique",
+        "Renforcement invisible",
+        "Nettoyage délicat"
+      ],
+      "specializations": [
+        "Vêtements vintage (années 20-80)",
+        "Pièces haute couture",
+        "Textiles anciens",
+        "Vêtements de cérémonie",
+        "Costumes traditionnels",
+        "Pièces de musée"
+      ],
+      "consultation": {
+        "required": true,
+        "duration": "30-60 minutes",
+        "cost": 25,
+        "includes": [
+          "Évaluation détaillée",
+          "Devis personnalisé",
+          "Conseils d'entretien",
+          "Planning de restauration"
+        ]
+      },
+      "premium": true,
+      "consultation_required": true
+    },
+    {
+      "id": "stoppage-tissus",
+      "name": "Stoppage tissus",
+      "icon": "🪡",
+      "category": "technique",
+      "description": "Réparation de tissus chaîne et trame",
+      "detailed_description": "Technique spécialisée pour les tissus tissés (non tricotés). Reconstitution de la trame originale pour une réparation invisible sur costumes, pantalons, vestes.",
+      "price": {
+        "min": 25,
+        "max": 60,
+        "currency": "CHF",
+        "display": "25-60 CHF",
+        "factors": [
+          "Taille du trou",
+          "Complexité du tissage",
+          "Qualité du tissu",
+          "Disponibilité des fils"
+        ]
+      },
+      "duration": {
+        "min": 3,
+        "max": 7,
+        "unit": "jours",
+        "display": "3-7 jours"
+      },
+      "materials": [
+        "Laine tissée",
+        "Tweed",
+        "Flanelle",
+        "Gabardine",
+        "Tissus de costume",
+        "Étoffes d'ameublement"
+      ],
+      "techniques": [
+        "Analyse du tissage",
+        "Reconstitution chaîne/trame",
+        "Harmonisation des couleurs",
+        "Finition invisible"
+      ],
+      "applications": [
+        "Costumes de ville",
+        "Pantalons habillés",
+        "Vestes de tailleur",
+        "Manteaux",
+        "Tissus d'ameublement"
+      ]
+    },
+    {
+      "id": "transformation",
+      "name": "Transformation et ajustements",
+      "icon": "✂️",
+      "category": "retouche",
+      "description": "Modifications et adaptations de vêtements tricotés",
+      "detailed_description": "Service de transformation pour adapter vos vêtements : raccourcissement, élargissement, modification d'encolure, transformation de manches.",
+      "price": {
+        "min": 30,
+        "max": 80,
+        "currency": "CHF",
+        "display": "30-80 CHF",
+        "factors": [
+          "Complexité de la transformation",
+          "Quantité de travail",
+          "Ajout de matière nécessaire",
+          "Finitions requises"
+        ]
+      },
+      "duration": {
+        "min": 3,
+        "max": 10,
+        "unit": "jours",
+        "display": "3-10 jours",
+        "consultation": "Essayage recommandé"
+      },
+      "services": [
+        "Raccourcissement de manches",
+        "Modification d'encolure",
+        "Ajustement de taille",
+        "Transformation col/décolleté",
+        "Adaptation morphologique"
+      ],
+      "limitations": [
+        "Impossible d'agrandir significativement",
+        "Limité par la quantité de matière",
+        "Certaines transformations altèrent le style"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "remaillage",
+      "name": "Remaillage",
+      "description": "Réparations de mailles tricotées",
+      "icon": "🧵"
+    },
+    {
+      "id": "specialiste",
+      "name": "Spécialisé",
+      "description": "Services nécessitant une expertise particulière",
+      "icon": "🔍"
+    },
+    {
+      "id": "medical",
+      "name": "Médical",
+      "description": "Réparation de matériel médical textile",
+      "icon": "🧦"
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "description": "Services haut de gamme pour pièces d'exception",
+      "icon": "✨"
+    },
+    {
+      "id": "technique",
+      "name": "Technique",
+      "description": "Réparations techniques spécialisées",
+      "icon": "🪡"
+    },
+    {
+      "id": "retouche",
+      "name": "Retouche",
+      "description": "Transformations et ajustements",
+      "icon": "✂️"
+    }
+  ],
+  "pricing": {
+    "currency": "CHF",
+    "payment_methods": [
+      "Espèces",
+      "Virement bancaire",
+      "PayPal (+3%)",
+      "Facture (clients réguliers)"
+    ],
+    "discounts": [
+      {
+        "type": "volume",
+        "description": "5% dès 3 pièces",
+        "min_items": 3,
+        "percentage": 5
+      },
+      {
+        "type": "senior",
+        "description": "10% pour les 65 ans et plus",
+        "age_min": 65,
+        "percentage": 10
+      },
+      {
+        "type": "student",
+        "description": "15% pour étudiants (sur justificatif)",
+        "percentage": 15,
+        "proof_required": true
+      }
+    ],
+    "surcharges": [
+      {
+        "type": "express",
+        "description": "Service express 24-48h",
+        "percentage": 50
+      },
+      {
+        "type": "weekend",
+        "description": "Travail week-end",
+        "percentage": 25
+      },
+      {
+        "type": "pickup_delivery",
+        "description": "Collecte et livraison à domicile",
+        "fixed_price": 15
+      }
+    ],
+    "free_services": [
+      "Devis et estimation",
+      "Conseils d'entretien",
+      "Petit nettoyage si nécessaire",
+      "Emballage retour"
+    ]
+  },
+  "guarantees": {
+    "quality": {
+      "duration": "6 mois",
+      "description": "Garantie qualité sur la solidité de la réparation"
+    },
+    "satisfaction": {
+      "description": "Retouche gratuite si le résultat ne convient pas",
+      "conditions": "Dans les 48h suivant la livraison"
+    },
+    "exclusions": [
+      "Usure normale du vêtement",
+      "Dommages causés par un mauvais entretien",
+      "Transformations importantes du vêtement"
+    ]
+  },
+  "seasons": {
+    "high_season": {
+      "months": ["September", "October", "November", "December"],
+      "reason": "Période des mites et préparation hiver",
+      "delay_impact": "+1-2 jours",
+      "booking_advice": "Réservation recommandée"
+    },
+    "low_season": {
+      "months": ["April", "May", "June", "July"],
+      "reason": "Moins de demandes",
+      "delay_impact": "Délais standards",
+      "availability": "Excellente"
+    }
+  },
+  "meta": {
+    "last_updated": "2025-01-15T10:30:00Z",
+    "version": "1.0",
+    "currency": "CHF",
+    "tax_included": true,
+    "minimum_charge": 15,
+    "consultation_fee": 25,
+    "revision": 1
+  }
+}

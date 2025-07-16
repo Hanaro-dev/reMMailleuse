@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===== SITEMAP XML - SITE REMMAILLEUSE ===== -->
+<!-- Plan du site optimisé pour le référencement -->
+<!-- Généré pour Mme Monod, artisane remmailleuse -->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    <!-- ===== PAGE PRINCIPALE ===== -->
+    <url>
+        <loc>https://remmailleuse.ch/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Images importantes de la page d'accueil -->
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/profile/portrait-mme-monod.jpg</image:loc>
+            <image:caption>Portrait de Mme Monod, artisane remmailleuse spécialisée en réparation de tissus</image:caption>
+            <image:title>Mme Monod - Remmailleuse professionnelle</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/hero/hero-visual.jpg</image:loc>
+            <image:caption>Remaillage traditionnel maille par maille avec loupe et crochet minuscule</image:caption>
+            <image:title>Technique de remaillage artisanal</image:title>
+        </image:image>
+    </url>
+
+    <!-- ===== SECTIONS PRINCIPALES (Ancres) ===== -->
+    <!-- Ces URLs virtuelles aident les moteurs à comprendre la structure -->
+    
+    <url>
+        <loc>https://remmailleuse.ch/#expertise</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://remmailleuse.ch/#galerie</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <!-- Images de la galerie avant/après -->
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/pull-cachemire-before.jpg</image:loc>
+            <image:caption>Pull en cachemire avant réparation - trou de mite visible</image:caption>
+            <image:title>Avant réparation: Pull cachemire endommagé</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/pull-cachemire-after.jpg</image:loc>
+            <image:caption>Pull en cachemire après remaillage - réparation invisible</image:caption>
+            <image:title>Après réparation: Pull cachemire restauré</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/bas-contention-before.jpg</image:loc>
+            <image:caption>Bas de contention avant raccommodage avec machine Elna</image:caption>
+            <image:title>Avant: Bas de contention à réparer</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/bas-contention-after.jpg</image:loc>
+            <image:caption>Bas de contention après raccommodage - propriétés médicales préservées</image:caption>
+            <image:title>Après: Bas de contention réparé</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/robe-vintage-before.jpg</image:loc>
+            <image:caption>Robe vintage avant restauration complète</image:caption>
+            <image:title>Avant: Robe vintage à restaurer</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://remmailleuse.ch/assets/images/gallery/robe-vintage-after.jpg</image:loc>
+            <image:caption>Robe vintage après restauration à l'identique</image:caption>
+            <image:title>Après: Robe vintage restaurée</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://remmailleuse.ch/#services</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://remmailleuse.ch/#contact</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ===== PAGES ALTERNATIVES (si créées) ===== -->
+    <!-- Décommenter si ces pages sont créées -->
+    
+    <!--
+    <url>
+        <loc>https://remmailleuse.ch/services-remaillage/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://remmailleuse.ch/reparation-trous-mites/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://remmailleuse.ch/bas-contention/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://remmailleuse.ch/blog/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    -->
+
+    <!-- ===== FICHIERS STATIQUES IMPORTANTS ===== -->
+    
+    <url>
+        <loc>https://remmailleuse.ch/manifest.json</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>
+
+<!-- 
+===== NOTES DE MAINTENANCE =====
+
+Ce sitemap XML est optimisé pour:
+- Référencement local Suisse romande
+- Mots-clés: remaillage, réparation tissus, lainages, bas contention
+- Images avant/après (fort impact SEO)
+- Structure simple d'une page avec ancres
+
+Fréquences de mise à jour recommandées:
+- Page principale: Hebdomadaire (contenu actualité)
+- Expertise: Mensuel (évolution savoir-faire)  
+- Galerie: Hebdomadaire (nouvelles réalisations)
+- Services: Mensuel (tarifs, nouveaux services)
+- Contact: Mensuel (horaires, disponibilités)
+
+Pour la maintenance:
+1. Mettre à jour lastmod lors de modifications
+2. Ajouter nouvelles images galerie
+3. Créer sitemaps séparés si +500 URLs
+4. Vérifier dans Google Search Console
+
+Généré le: 15 janvier 2025
+Projet: Site Remmailleuse - Mme Monod
+Contact technique: admin@remmailleuse.ch
+-->

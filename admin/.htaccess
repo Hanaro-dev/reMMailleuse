@@ -1,0 +1,44 @@
+# Configuration Apache sécurisée pour le dossier admin
+
+# Fichier index par défaut
+DirectoryIndex index.php
+
+# Protection contre les attaques XSS et injection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Bloquer les requêtes suspicieuses
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+    RewriteCond %{QUERY_STRING} base64_(en|de)code[^(]*\([^)]*\) [OR]
+    RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Headers de sécurité renforcés
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Interdire l'accès aux fichiers sensibles
+<Files "*.log">
+    Require all denied
+</Files>
+
+<Files "*.bak">
+    Require all denied
+</Files>
+
+<Files "*test*">
+    Require all denied
+</Files>
+
+<Files "*.tmp">
+    Require all denied
+</Files>

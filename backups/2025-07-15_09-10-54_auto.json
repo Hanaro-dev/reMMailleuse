@@ -1,0 +1,42 @@
+{
+    "id": "2025-07-15_09-10-54_auto",
+    "timestamp": 1752570654,
+    "type": "auto",
+    "size": 52912,
+    "files": [
+        {
+            "filename": "content.json",
+            "backup_path": "\/home\/hanaro\/Projets_Web\/ReMmailleuse\/api\/..\/backups\/2025-07-15_09-10-54_auto_content.json",
+            "size": 13264,
+            "hash": "5a46a1611420eebb7ccd67282bf791ec62b5db8dd857e9f299f6269936c94940",
+            "last_modified": 1752447121
+        },
+        {
+            "filename": "gallery.json",
+            "backup_path": "\/home\/hanaro\/Projets_Web\/ReMmailleuse\/api\/..\/backups\/2025-07-15_09-10-54_auto_gallery.json",
+            "size": 17047,
+            "hash": "5558d66b2e4b1e430971c9f34770e85ccb1be154e0e846ccc14add105b1101b8",
+            "last_modified": 1752447147
+        },
+        {
+            "filename": "services.json",
+            "backup_path": "\/home\/hanaro\/Projets_Web\/ReMmailleuse\/api\/..\/backups\/2025-07-15_09-10-54_auto_services.json",
+            "size": 12521,
+            "hash": "92506620a2b7256e602a4bb62544e5c7c03698d7f20f5169e40c9018bc7dbbb8",
+            "last_modified": 1752447134
+        },
+        {
+            "filename": "settings.json",
+            "backup_path": "\/home\/hanaro\/Projets_Web\/ReMmailleuse\/api\/..\/backups\/2025-07-15_09-10-54_auto_settings.json",
+            "size": 10080,
+            "hash": "01b1835adbb8fb8ef310a090fb35582ae57756693198df40117467803878c527",
+            "last_modified": 1752568384
+        }
+    ],
+    "metadata": {
+        "created_at": "2025-07-15T09:10:54+00:00",
+        "server": "0.0.0.0",
+        "user_agent": "Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36",
+        "ip": "127.0.0.1"
+    }
+}

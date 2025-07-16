@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Remmailleuse</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Audiowide&display=swap" rel="stylesheet">
+    
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    
+    <!-- Header Admin -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-header-content">
+                <h1 class="admin-logo">🧵 Admin <span style="font-family: 'Audiowide', cursive; color: #e1bee7; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">re<span style="color: #f3e5f5;">M</span><span style="color: #e1bee7;">mailleuse</span></span></h1>
+                <div class="admin-actions">
+                    <button class="btn btn-outline" onclick="previewSite()">
+                        👁️ Prévisualiser
+                    </button>
+                    <button class="btn btn-success" onclick="saveAll()">
+                        💾 Sauvegarder tout
+                    </button>
+                    <button class="btn btn-secondary" onclick="exportData()">
+                        📤 Exporter
+                    </button>
+                    <button class="btn btn-danger" onclick="logout()">
+                        🚪 Déconnexion
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Status Bar -->
+    <div class="container">
+        <div id="status-bar" class="status-bar">
+            ✅ Interface d'administration chargée !
+        </div>
+    </div>
+
+    <!-- Layout Principal -->
+    <div class="container">
+        <div class="admin-layout">
+            
+            <!-- Sidebar -->
+            <aside class="admin-sidebar">
+                <h3 class="sidebar-title">📋 Sections</h3>
+                <ul class="sidebar-menu">
+                    <li class="sidebar-item">
+                        <a href="#hero-section" class="sidebar-link active" onclick="showSection('hero-section', this)">
+                            <span class="sidebar-icon">🏠</span>
+                            Page d'accueil
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#expertise-section" class="sidebar-link" onclick="showSection('expertise-section', this)">
+                            <span class="sidebar-icon">👩‍🔧</span>
+                            Expertise
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#gallery-section" class="sidebar-link" onclick="showSection('gallery-section', this)">
+                            <span class="sidebar-icon">🖼️</span>
+                            Galerie
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#services-section" class="sidebar-link" onclick="showSection('services-section', this)">
+                            <span class="sidebar-icon">💼</span>
+                            Services
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#contact-section" class="sidebar-link" onclick="showSection('contact-section', this)">
+                            <span class="sidebar-icon">📞</span>
+                            Contact
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#settings-section" class="sidebar-link" onclick="showSection('settings-section', this)">
+                            <span class="sidebar-icon">⚙️</span>
+                            Paramètres
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#backup-section" class="sidebar-link" onclick="showSection('backup-section', this)">
+                            <span class="sidebar-icon">💾</span>
+                            Sauvegardes
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="admin-main">
+                
+                <!-- Section Hero -->
+                <section id="hero-section" class="admin-section active">
+                    <div class="section-header">
+                        <h2 class="section-title">🏠 Page d'accueil</h2>
+                        <button class="btn btn-primary" onclick="autoSave('hero')">💾 Sauvegarder</button>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Titre principal</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Titre</label>
+                                <input type="text" id="hero-title" class="form-input" placeholder="Titre principal">
+                                <div class="form-help">Le titre principal qui apparaît en gros sur la page d'accueil</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Sous-titre</label>
+                                <input type="text" id="hero-subtitle" class="form-input" placeholder="Sous-titre">
+                                <div class="form-help">Description courte sous le titre</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Bouton d'action</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Texte du bouton</label>
+                                <input type="text" id="hero-cta-text" class="form-input" placeholder="Texte du bouton">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Lien du bouton</label>
+                                <input type="text" id="hero-cta-link" class="form-input" placeholder="#expertise">
+                                <div class="form-help">Vers quelle section le bouton doit-il pointer</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Expertise -->
+                <section id="expertise-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">👩‍🔧 Mon Expertise</h2>
+                        <button class="btn btn-primary" onclick="autoSave('expertise')">💾 Sauvegarder</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Présentation personnelle</h3>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nom complet</label>
+                            <input type="text" id="expert-name" class="form-input" placeholder="Votre nom et titre">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description (paragraphe 1)</label>
+                            <textarea id="expert-desc-1" class="form-input form-textarea" placeholder="Premier paragraphe de présentation"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description (paragraphe 2)</label>
+                            <textarea id="expert-desc-2" class="form-input form-textarea" placeholder="Deuxième paragraphe de présentation"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Étapes du processus</h3>
+                        </div>
+                        <div id="process-steps-admin">
+                            <!-- Les étapes seront générées dynamiquement -->
+                        </div>
+                        <button class="btn btn-outline" onclick="addProcessStep()">➕ Ajouter une étape</button>
+                    </div>
+                </section>
+
+                <!-- Section Galerie -->
+                <section id="gallery-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">🖼️ Galerie</h2>
+                        <button class="btn btn-primary" onclick="addGalleryItem()">➕ Ajouter une réalisation</button>
+                    </div>
+
+                    <div id="gallery-admin">
+                        <!-- Les éléments de galerie seront générés dynamiquement -->
+                    </div>
+                </section>
+
+                <!-- Section Services -->
+                <section id="services-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">💼 Services & Tarifs</h2>
+                        <button class="btn btn-primary" onclick="addService()">➕ Ajouter un service</button>
+                    </div>
+
+                    <div id="services-admin">
+                        <!-- Les services seront générés dynamiquement -->
+                    </div>
+                </section>
+
+                <!-- Section Contact -->
+                <section id="contact-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">📞 Informations de contact</h2>
+                        <button class="btn btn-primary" onclick="autoSave('contact')">💾 Sauvegarder</button>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">🇨🇭 Adresse Suisse</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Adresse</label>
+                                <input type="text" id="address-ch" class="form-input" placeholder="Rue et numéro">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Code postal et ville</label>
+                                <input type="text" id="city-ch" class="form-input" placeholder="Code postal et ville">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">🇫🇷 Adresse France</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Adresse</label>
+                                <input type="text" id="address-fr" class="form-input" placeholder="Adresse complète">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Code postal et ville</label>
+                                <input type="text" id="city-fr" class="form-input" placeholder="Code postal et ville">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📞 Téléphones</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Téléphone fixe</label>
+                                <input type="tel" id="phone-1" class="form-input" placeholder="+41 XX.XXX.XX.XX">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Téléphone mobile</label>
+                                <input type="tel" id="phone-2" class="form-input" placeholder="+41 XX.XXX.XX.XX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email de contact</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="votre.email@exemple.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Délais de réparation</label>
+                            <input type="text" id="repair-delays" class="form-input" placeholder="2 à 5 jours selon réparation">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Paramètres -->
+                <section id="settings-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">⚙️ Paramètres du site</h2>
+                        <button class="btn btn-primary" onclick="autoSave('settings')">💾 Sauvegarder</button>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">🌐 Informations générales</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nom du site</label>
+                                <input type="text" id="site-name" class="form-input" placeholder="Nom affiché du site">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Description pour les moteurs de recherche</label>
+                                <textarea id="site-description" class="form-input" rows="3" placeholder="Description qui apparaîtra dans Google"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Mots-clés (séparés par des virgules)</label>
+                                <input type="text" id="site-keywords" class="form-input" placeholder="remaillage, réparation, tissus, lainages">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">🎨 Personnalisation</h3>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Couleur principale</label>
+                                    <input type="color" id="color-primary" class="form-input" style="height: 50px;">
+                                    <div class="form-help">Couleur des boutons et accents</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Couleur secondaire</label>
+                                    <input type="color" id="color-secondary" class="form-input" style="height: 50px;">
+                                    <div class="form-help">Couleur des éléments secondaires</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Couleur d'accent</label>
+                                    <input type="color" id="color-accent" class="form-input" style="height: 50px;">
+                                    <div class="form-help">Couleur des textes d'accent</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Couleur neutre</label>
+                                    <input type="color" id="color-neutral" class="form-input" style="height: 50px;">
+                                    <div class="form-help">Couleur de fond des sections</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline" onclick="applyThemePreview()">👁️ Prévisualiser les couleurs</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Section Sauvegardes -->
+                <section id="backup-section" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="section-title">💾 Gestion des sauvegardes</h2>
+                        <p class="section-description">Créez et gérez les sauvegardes de vos données</p>
+                    </div>
+                    
+                    <!-- Le contenu sera généré par backup-manager.js -->
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="modal-overlay" id="loading-modal" style="display: none;">
+        <div class="modal-content loading-modal">
+            <div class="loading-spinner"></div>
+            <p>Chargement en cours...</p>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="confirm-modal" style="display: none;">
+        <div class="modal-content">
+            <h3 id="confirm-title">Confirmation</h3>
+            <p id="confirm-message">Êtes-vous sûr de vouloir effectuer cette action ?</p>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeConfirmModal()">Annuler</button>
+                <button class="btn btn-primary" id="confirm-action">Confirmer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/csrf.js"></script>
+    <script src="../assets/js/analytics.js"></script>
+    <script src="../assets/js/image-upload.js"></script>
+    <script src="../assets/js/backup-manager.js"></script>
+    <script src="../assets/js/admin.js"></script>
+    
+    <!-- Auto-save des modifications -->
+    <script>
+        // Fonction de déconnexion
+        async function logout() {
+            if (window.adminApp && window.adminApp.hasUnsavedChanges) {
+                if (!confirm('Vous avez des modifications non sauvegardées. Voulez-vous vraiment vous déconnecter ?')) {
+                    return;
+                }
+            }
+            
+            try {
+                const response = await fetch('../api/auth.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ action: 'logout' })
+                });
+                
+                if (response.ok) {
+                    window.location.href = './login.html';
+                }
+            } catch (error) {
+                // Erreur de déconnexion
+                alert('Erreur lors de la déconnexion. Veuillez réessayer.');
+            }
+        }
+        // Auto-save silencieux toutes les 30 secondes
+        setInterval(() => {
+            if (window.adminApp && window.adminApp.hasUnsavedChanges) {
+                window.adminApp.autoSave();
+            }
+        }, 30000);
+
+        // Sauvegarde avant fermeture de la page
+        window.addEventListener('beforeunload', (e) => {
+            if (window.adminApp && window.adminApp.hasUnsavedChanges) {
+                e.preventDefault();
+                e.returnValue = 'Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?';
+            }
+        });
+        
+        // Gestion du bouton retour en haut
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Afficher/masquer le bouton selon la position de scroll
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+    </script>
+    
+    <!-- Bouton retour en haut -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" title="Retour en haut">
+        ↑
+    </button>
+    
+</body>
+</html>

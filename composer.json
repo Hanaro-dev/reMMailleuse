@@ -1,0 +1,48 @@
+{
+    "name": "remmailleuse/website",
+    "description": "Site web professionnel pour artisane spécialisée en remaillage",
+    "type": "project",
+    "keywords": ["remaillage", "textile", "artisanat", "php"],
+    "authors": [
+        {
+            "name": "Remmailleuse - Mme Monod",
+            "email": "contact@remmailleuse.ch"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpstan/phpstan": "^1.10",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Remmailleuse\\": "api/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Remmailleuse\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:unit": "phpunit --testsuite unit",
+        "test:integration": "phpunit --testsuite integration",
+        "test:coverage": "phpunit --coverage-html coverage",
+        "analyse": "phpstan analyse api",
+        "cs": "phpcs api tests",
+        "cs:fix": "phpcbf api tests"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

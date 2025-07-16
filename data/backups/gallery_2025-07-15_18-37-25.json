@@ -1,0 +1,471 @@
+{
+  "categories": [
+    {
+      "id": "tous",
+      "name": "Tous",
+      "description": "Toutes les réalisations",
+      "active": true,
+      "count": 16
+    },
+    {
+      "id": "pulls",
+      "name": "Pulls & Gilets",
+      "description": "Remaillage de lainages tricotés",
+      "count": 6
+    },
+    {
+      "id": "bas",
+      "name": "Bas de contention",
+      "description": "Réparation de bas médicaux",
+      "count": 4
+    },
+    {
+      "id": "delicats",
+      "name": "Tissus délicats",
+      "description": "Cachemire, soie, pièces de luxe",
+      "count": 4
+    },
+    {
+      "id": "vintage",
+      "name": "Pièces vintage",
+      "description": "Vêtements anciens et de collection",
+      "count": 2
+    }
+  ],
+  "items": [
+    {
+      "id": "pull-cachemire-beige",
+      "title": "Pull cachemire beige",
+      "category": "delicats",
+      "description": "Réparation invisible d'un trou de mite sur pull en cachemire de luxe. Reconstruction parfaite des mailles avec fil assorti.",
+      "images": {
+        "before": "assets/images/gallery/pull-cachemire-before.jpg",
+        "after": "assets/images/gallery/pull-cachemire-after.jpg",
+        "detail": "assets/images/gallery/pull-cachemire-detail.jpg"
+      },
+      "fallback_icon": "🧥",
+      "service": "Trous de mite",
+      "material": "Cachemire 100%",
+      "damage_type": "Trou de mite",
+      "damage_size": "1.5cm × 1cm",
+      "duration": "3 jours",
+      "difficulty": "Expert",
+      "price_range": "35-45 CHF",
+      "date": "2024-11-10",
+      "featured": true,
+      "testimonial": {
+        "client": "Marie L.",
+        "text": "Travail absolument remarquable ! La réparation est totalement invisible.",
+        "rating": 5
+      }
+    },
+    {
+      "id": "bas-contention-sigvaris",
+      "title": "Bas Sigvaris classe II",
+      "category": "bas",
+      "description": "Remaillage précis avec machine Elna spécialisée. Maintien des propriétés médicales du bas de contention.",
+      "images": {
+        "before": "assets/images/gallery/bas-contention-before.jpg",
+        "after": "assets/images/gallery/bas-contention-after.jpg"
+      },
+      "fallback_icon": "🧦",
+      "service": "Bas de contention",
+      "material": "Élasthanne médical",
+      "damage_type": "Maille filée",
+      "damage_size": "3cm linéaire",
+      "duration": "1 jour",
+      "difficulty": "Spécialisé",
+      "price_range": "18-22 CHF",
+      "date": "2024-11-05",
+      "medical": true,
+      "urgency": "Express 24h"
+    },
+    {
+      "id": "robe-vintage-annees50",
+      "title": "Robe vintage années 50",
+      "category": "vintage",
+      "description": "Restauration complète d'une pièce d'époque en laine fine. Conservation de l'authenticité avec techniques d'époque.",
+      "images": {
+        "before": "assets/images/gallery/robe-vintage-before.jpg",
+        "after": "assets/images/gallery/robe-vintage-after.jpg",
+        "detail": "assets/images/gallery/robe-vintage-detail.jpg"
+      },
+      "fallback_icon": "👗",
+      "service": "Rénovation tissus",
+      "material": "Laine fine vintage",
+      "damage_type": "Usure multiple",
+      "damage_size": "Plusieurs zones",
+      "duration": "8 jours",
+      "difficulty": "Master",
+      "price_range": "80-120 CHF",
+      "date": "2024-10-28",
+      "vintage": true,
+      "era": "Années 1950",
+      "historical_value": "Pièce de collection"
+    },
+    {
+      "id": "echarpe-soie-hermes",
+      "title": "Écharpe soie Hermès",
+      "category": "delicats",
+      "description": "Réparation délicate d'une accroc sur écharpe de luxe. Stoppage invisible préservant la valeur de la pièce.",
+      "images": {
+        "before": "assets/images/gallery/echarpe-soie-before.jpg",
+        "after": "assets/images/gallery/echarpe-soie-after.jpg"
+      },
+      "fallback_icon": "🧣",
+      "service": "Stoppage tissus",
+      "material": "Soie twill",
+      "damage_type": "Accroc",
+      "damage_size": "0.8cm",
+      "duration": "4 jours",
+      "difficulty": "Expert",
+      "price_range": "45-65 CHF",
+      "date": "2024-10-20",
+      "luxury_brand": "Hermès",
+      "preservation_focus": "Valeur patrimoniale"
+    },
+    {
+      "id": "pull-irlandais-aran",
+      "title": "Pull irlandais Aran",
+      "category": "pulls",
+      "description": "Remaillage complexe sur pull traditionnel irlandais avec motifs torsadés. Respect des techniques ancestrales.",
+      "images": {
+        "before": "assets/images/gallery/pull-irlandais-before.jpg",
+        "after": "assets/images/gallery/pull-irlandais-after.jpg",
+        "pattern": "assets/images/gallery/pull-irlandais-pattern.jpg"
+      },
+      "fallback_icon": "🧶",
+      "service": "Remaillage classique",
+      "material": "Laine vierge irlandaise",
+      "damage_type": "Trou et mailles filées",
+      "damage_size": "2cm × 1.5cm",
+      "duration": "5 jours",
+      "difficulty": "Expert",
+      "price_range": "38-48 CHF",
+      "date": "2024-10-15",
+      "traditional": true,
+      "pattern_complexity": "Motifs Aran traditionnels"
+    },
+    {
+      "id": "gilet-alpaga-gris",
+      "title": "Gilet alpaga gris",
+      "category": "pulls",
+      "description": "Réparation de multiples trous de mites sur gilet en alpaga. Harmonisation parfaite des nuances de gris.",
+      "images": {
+        "before": "assets/images/gallery/gilet-alpaga-before.jpg",
+        "after": "assets/images/gallery/gilet-alpaga-after.jpg"
+      },
+      "fallback_icon": "🦙",
+      "service": "Trous de mite",
+      "material": "Alpaga 80%, laine 20%",
+      "damage_type": "Multiples trous de mites",
+      "damage_size": "5 trous (0.5-1.2cm)",
+      "duration": "4 jours",
+      "difficulty": "Avancé",
+      "price_range": "42-55 CHF",
+      "date": "2024-10-08",
+      "multiple_damage": true,
+      "color_matching": "Nuances de gris complexes"
+    },
+    {
+      "id": "collants-compression-jobst",
+      "title": "Collants compression Jobst",
+      "category": "bas",
+      "description": "Réparation urgente de collants de compression pour diabétique. Maintien des propriétés thérapeutiques.",
+      "images": {
+        "before": "assets/images/gallery/collants-jobst-before.jpg",
+        "after": "assets/images/gallery/collants-jobst-after.jpg"
+      },
+      "fallback_icon": "🦵",
+      "service": "Bas de contention",
+      "material": "Microfibre médicale",
+      "damage_type": "Échelle importante",
+      "damage_size": "8cm linéaire",
+      "duration": "Même jour",
+      "difficulty": "Spécialisé",
+      "price_range": "20-25 CHF",
+      "date": "2024-09-30",
+      "medical": true,
+      "urgent": true,
+      "pathology": "Diabète - compression thérapeutique"
+    },
+    {
+      "id": "cardigan-mohair-rose",
+      "title": "Cardigan mohair rose",
+      "category": "delicats",
+      "description": "Remaillage délicat sur cardigan mohair. Travail minutieux pour préserver la texture aérienne du mohair.",
+      "images": {
+        "before": "assets/images/gallery/cardigan-mohair-before.jpg",
+        "after": "assets/images/gallery/cardigan-mohair-after.jpg"
+      },
+      "fallback_icon": "🌸",
+      "service": "Remaillage classique",
+      "material": "Mohair 70%, soie 30%",
+      "damage_type": "Accroc avec mailles filées",
+      "damage_size": "1.8cm × 1cm",
+      "duration": "3 jours",
+      "difficulty": "Avancé",
+      "price_range": "32-42 CHF",
+      "date": "2024-09-25",
+      "delicate_fiber": true,
+      "texture_preservation": "Maintien de l'aspect aérien"
+    },
+    {
+      "id": "pull-marin-traditionnel",
+      "title": "Pull marin traditionnel",
+      "category": "pulls",
+      "description": "Restauration d'un authentique pull de marin breton avec rayures traditionnelles. Respect du patrimoine maritime.",
+      "images": {
+        "before": "assets/images/gallery/pull-marin-before.jpg",
+        "after": "assets/images/gallery/pull-marin-after.jpg",
+        "stripes": "assets/images/gallery/pull-marin-rayures.jpg"
+      },
+      "fallback_icon": "⚓",
+      "service": "Remaillage classique",
+      "material": "Laine marine traditionnelle",
+      "damage_type": "Usure coudes et emmanchures",
+      "damage_size": "Plusieurs zones",
+      "duration": "6 jours",
+      "difficulty": "Avancé",
+      "price_range": "45-60 CHF",
+      "date": "2024-09-18",
+      "traditional": true,
+      "heritage": "Patrimoine maritime breton",
+      "stripes": "21 rayures traditionnelles"
+    },
+    {
+      "id": "chaussettes-ski-laine",
+      "title": "Chaussettes de ski",
+      "category": "bas",
+      "description": "Réparation de chaussettes de ski en laine mérinos. Renforcement talon et pointe pour usage intensif.",
+      "images": {
+        "before": "assets/images/gallery/chaussettes-ski-before.jpg",
+        "after": "assets/images/gallery/chaussettes-ski-after.jpg"
+      },
+      "fallback_icon": "🎿",
+      "service": "Remaillage classique",
+      "material": "Laine mérinos technique",
+      "damage_type": "Usure talon et pointe",
+      "damage_size": "Zones d'usure étendues",
+      "duration": "2 jours",
+      "difficulty": "Intermédiaire",
+      "price_range": "22-28 CHF",
+      "date": "2024-09-12",
+      "sport": true,
+      "reinforcement": "Renforcement zones d'usure"
+    },
+    {
+      "id": "chale-dentelle-ancienne",
+      "title": "Châle dentelle ancienne",
+      "category": "vintage",
+      "description": "Restauration minutieuse d'un châle en dentelle du XIXe siècle. Conservation du patrimoine textile familial.",
+      "images": {
+        "before": "assets/images/gallery/chale-dentelle-before.jpg",
+        "after": "assets/images/gallery/chale-dentelle-after.jpg",
+        "detail": "assets/images/gallery/chale-dentelle-motifs.jpg"
+      },
+      "fallback_icon": "🕸️",
+      "service": "Rénovation tissus",
+      "material": "Dentelle de coton XIXe",
+      "damage_type": "Fils cassés, déchirures",
+      "damage_size": "Multiples zones fragiles",
+      "duration": "12 jours",
+      "difficulty": "Master",
+      "price_range": "120-180 CHF",
+      "date": "2024-08-30",
+      "antique": true,
+      "historical_period": "XIXe siècle",
+      "family_heritage": "Patrimoine familial",
+      "lace_type": "Dentelle aux fuseaux"
+    },
+    {
+      "id": "gilet-cache-coeur-noir",
+      "title": "Gilet cache-cœur noir",
+      "category": "pulls",
+      "description": "Remaillage précis sur gilet cache-cœur en laine fine. Réparation invisible sur zone très visible.",
+      "images": {
+        "before": "assets/images/gallery/gilet-noir-before.jpg",
+        "after": "assets/images/gallery/gilet-noir-after.jpg"
+      },
+      "fallback_icon": "🖤",
+      "service": "Remaillage classique",
+      "material": "Laine fine noire",
+      "damage_type": "Trou devant visible",
+      "damage_size": "1.2cm diamètre",
+      "duration": "2 jours",
+      "difficulty": "Avancé",
+      "price_range": "28-35 CHF",
+      "date": "2024-08-22",
+      "visible_area": true,
+      "color_challenge": "Noir profond - nuançage critique"
+    },
+    {
+      "id": "poncho-laine-perou",
+      "title": "Poncho laine du Pérou",
+      "category": "delicats",
+      "description": "Restauration d'un poncho traditionnel péruvien avec motifs géométriques. Respect des techniques ancestrales.",
+      "images": {
+        "before": "assets/images/gallery/poncho-perou-before.jpg",
+        "after": "assets/images/gallery/poncho-perou-after.jpg",
+        "patterns": "assets/images/gallery/poncho-motifs.jpg"
+      },
+      "fallback_icon": "🦙",
+      "service": "Rénovation tissus",
+      "material": "Laine d'alpaga péruvienne",
+      "damage_type": "Usure et déchirures",
+      "damage_size": "Plusieurs zones",
+      "duration": "7 jours",
+      "difficulty": "Expert",
+      "price_range": "65-85 CHF",
+      "date": "2024-08-15",
+      "cultural_heritage": "Artisanat péruvien traditionnel",
+      "geometric_patterns": "Motifs géométriques incas",
+      "natural_dyes": "Teintures naturelles d'époque"
+    },
+    {
+      "id": "bas-compression-venos",
+      "title": "Bas compression Venosan",
+      "category": "bas",
+      "description": "Réparation de bas de compression suite à chirurgie. Urgence médicale traitée en priorité.",
+      "images": {
+        "before": "assets/images/gallery/bas-venos-before.jpg", 
+        "after": "assets/images/gallery/bas-venos-after.jpg"
+      },
+      "fallback_icon": "🏥",
+      "service": "Bas de contention",
+      "material": "Microfibre compressive",
+      "damage_type": "Accroc post-chirurgical",
+      "damage_size": "2.5cm",
+      "duration": "6 heures",
+      "difficulty": "Spécialisé",
+      "price_range": "20-25 CHF",
+      "date": "2024-08-08",
+      "medical": true,
+      "post_surgical": true,
+      "priority": "Urgence médicale"
+    },
+    {
+      "id": "pull-torsades-cable",
+      "title": "Pull torsades câble",
+      "category": "pulls",
+      "description": "Remaillage complexe sur pull à torsades. Reconstruction des motifs câblés avec précision millimétrique.",
+      "images": {
+        "before": "assets/images/gallery/pull-torsades-before.jpg",
+        "after": "assets/images/gallery/pull-torsades-after.jpg",
+        "cables": "assets/images/gallery/pull-torsades-detail.jpg"
+      },
+      "fallback_icon": "🔀",
+      "service": "Remaillage classique",
+      "material": "Laine épaisse irlandaise",
+      "damage_type": "Trou dans zone torsadée",
+      "damage_size": "1.5cm dans motif",
+      "duration": "4 jours",
+      "difficulty": "Master",
+      "price_range": "42-55 CHF",
+      "date": "2024-07-30",
+      "complex_pattern": true,
+      "cable_knitting": "Motifs torsades traditionnels",
+      "precision_required": "Reconstruction millimétrique"
+    },
+    {
+      "id": "mitaines-fairisle",
+      "title": "Mitaines Fair Isle",
+      "category": "pulls",
+      "description": "Réparation de mitaines écossaises avec motif Fair Isle traditionnel. Conservation des couleurs d'origine.",
+      "images": {
+        "before": "assets/images/gallery/mitaines-fairisle-before.jpg",
+        "after": "assets/images/gallery/mitaines-fairisle-after.jpg"
+      },
+      "fallback_icon": "🧤",
+      "service": "Remaillage classique",
+      "material": "Laine Shetland multicolore",
+      "damage_type": "Usure pouce et index",
+      "damage_size": "Zones d'usure multiples",
+      "duration": "3 jours",
+      "difficulty": "Expert",
+      "price_range": "35-45 CHF",
+      "date": "2024-07-22",
+      "traditional_pattern": "Fair Isle écossais",
+      "multicolor": "8 couleurs traditionnelles",
+      "scottish_heritage": "Patrimoine écossais"
+    }
+  ],
+  "featured_works": [
+    "pull-cachemire-beige",
+    "robe-vintage-annees50", 
+    "chale-dentelle-ancienne",
+    "pull-irlandais-aran"
+  ],
+  "statistics": {
+    "total_items": 16,
+    "success_rate": "100%",
+    "average_duration": "3.5 jours",
+    "customer_satisfaction": "4.9/5",
+    "repeat_customers": "78%",
+    "urgency_rate": "95% respecté"
+  },
+  "techniques_showcased": [
+    {
+      "name": "Remaillage invisible",
+      "items": ["pull-cachemire-beige", "pull-irlandais-aran", "gilet-cache-coeur-noir"],
+      "description": "Reconstruction maille par maille parfaitement invisible"
+    },
+    {
+      "name": "Stoppage de luxe",
+      "items": ["echarpe-soie-hermes"],
+      "description": "Réparation de tissus de très haute qualité"
+    },
+    {
+      "name": "Restauration patrimoniale",
+      "items": ["chale-dentelle-ancienne", "robe-vintage-annees50"],
+      "description": "Conservation du patrimoine textile"
+    },
+    {
+      "name": "Réparation médicale",
+      "items": ["bas-contention-sigvaris", "collants-compression-jobst"],
+      "description": "Maintien des propriétés thérapeutiques"
+    }
+  ],
+  "materials_expertise": [
+    {
+      "material": "Cachemire",
+      "count": 3,
+      "difficulty": "Expert",
+      "examples": ["pull-cachemire-beige"]
+    },
+    {
+      "material": "Laine traditionnelle",
+      "count": 5,
+      "difficulty": "Avancé",
+      "examples": ["pull-irlandais-aran", "pull-marin-traditionnel"]
+    },
+    {
+      "material": "Fibres médicales",
+      "count": 4,
+      "difficulty": "Spécialisé",
+      "examples": ["bas-contention-sigvaris", "collants-compression-jobst"]
+    },
+    {
+      "material": "Textiles anciens",
+      "count": 2,
+      "difficulty": "Master",
+      "examples": ["chale-dentelle-ancienne", "robe-vintage-annees50"]
+    },
+    {
+      "material": "Fibres délicates",
+      "count": 2,
+      "difficulty": "Expert",
+      "examples": ["cardigan-mohair-rose", "echarpe-soie-hermes"]
+    }
+  ],
+  "meta": {
+    "last_updated": "2025-01-15T11:00:00Z",
+    "version": "1.0",
+    "total_showcase_items": 16,
+    "categories_count": 5,
+    "difficulty_levels": ["Intermédiaire", "Avancé", "Expert", "Master", "Spécialisé"],
+    "image_formats": ["jpg", "webp"],
+    "fallback_icons": true,
+    "revision": 1
+  }
+}

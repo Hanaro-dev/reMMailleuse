@@ -1,0 +1,19 @@
+# Sécurité du dossier uploads
+Options -Indexes
+Options -ExecCGI
+
+# Interdire l'exécution de scripts
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+    Require all denied
+</FilesMatch>
+
+# Autoriser seulement les images
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Require all granted
+</FilesMatch>
+
+# Headers de sécurité pour les images
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Security-Policy "default-src 'none'"
+</FilesMatch>

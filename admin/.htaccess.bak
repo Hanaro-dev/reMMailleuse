@@ -1,0 +1,46 @@
+# Configuration Apache pour le dossier admin
+
+# Activer le moteur de réécriture
+RewriteEngine On
+
+# Redirection par défaut vers index.php
+DirectoryIndex index.php
+
+# Redirection de /admin vers /admin/
+RewriteCond %{REQUEST_URI} ^/admin$
+RewriteRule ^(.*)$ /admin/ [R=301,L]
+
+# Redirection de /admin/ vers /admin/index.php
+RewriteCond %{REQUEST_URI} ^/admin/$
+RewriteRule ^(.*)$ /admin/index.php [L]
+
+# Sécurité - Empêcher l'accès direct aux fichiers sensibles
+<FilesMatch "\.(log|json|bak|backup|old|tmp)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Headers de sécurité
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript text/xml application/xml application/xml+rss text/plain
+</IfModule>
+
+# Cache pour les ressources statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+</IfModule>

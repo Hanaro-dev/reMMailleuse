@@ -1,0 +1,160 @@
+{
+  "name": "Remmailleuse - Mme Monod",
+  "short_name": "Remmailleuse",
+  "description": "Artisane spécialisée en remaillage traditionnel et réparation invisible de tissus, lainages et bas de contention en Suisse et France",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#D4896B",
+  "background_color": "#F5F1EB",
+  "scope": "/",
+  
+  "icons": [
+    {
+      "src": "assets/images/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "assets/images/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Page d'accueil - Vue bureau"
+    },
+    {
+      "src": "assets/images/screenshots/mobile-gallery.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Galerie des réalisations - Vue mobile"
+    }
+  ],
+  
+  "categories": [
+    "business",
+    "lifestyle",
+    "utilities"
+  ],
+  
+  "lang": "fr",
+  "dir": "ltr",
+  
+  "shortcuts": [
+    {
+      "name": "Demander un devis",
+      "short_name": "Devis",
+      "description": "Formulaire de contact pour demande de réparation",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "assets/images/icons/shortcut-contact.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Voir la galerie",
+      "short_name": "Galerie",
+      "description": "Galerie des réalisations avant/après",
+      "url": "/#galerie",
+      "icons": [
+        {
+          "src": "assets/images/icons/shortcut-gallery.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Services et tarifs",
+      "short_name": "Tarifs",
+      "description": "Liste des services et grille tarifaire",
+      "url": "/#services",
+      "icons": [
+        {
+          "src": "assets/images/icons/shortcut-services.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  
+  "related_applications": [],
+  "prefer_related_applications": false,
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "handle_links": "preferred",
+  
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  
+  "protocol_handlers": [
+    {
+      "protocol": "mailto",
+      "url": "/#contact?email=%s"
+    }
+  ],
+  
+  "share_target": {
+    "action": "/#contact",
+    "method": "GET",
+    "params": {
+      "title": "subject",
+      "text": "message",
+      "url": "url"
+    }
+  }
+}
