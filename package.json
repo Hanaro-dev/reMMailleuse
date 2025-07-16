@@ -22,7 +22,8 @@
     "serve": "http-server -p 8000",
     "start": "npm run serve",
     "lint": "npm run validate",
-    "clean": "rm -rf assets/css/*.min.css assets/js/*.min.js"
+    "clean": "rm -rf assets/css/*.min.css assets/js/*.min.js",
+    "verify:pwa": "node scripts/verify-pwa.js"
   },
   "keywords": [
     "remaillage",
@@ -48,8 +49,7 @@
     "terser": "^5.27.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "@testing-library/jest-dom": "^6.1.4",
-    "puppeteer": "^21.5.2"
+    "@testing-library/jest-dom": "^6.1.4"
   },
   "browserslist": [
     "> 1%",
