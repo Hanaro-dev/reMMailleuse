@@ -127,7 +127,10 @@ class UIComponents {
         }
 
         // Étapes du processus
-        if (expertise.process?.steps) {
+        const process = this.dataManager.get('content', 'process');
+        if (process?.steps) {
+            this.renderProcessSteps(process.steps);
+        } else if (expertise.process?.steps) {
             this.renderProcessSteps(expertise.process.steps);
         }
     }
@@ -311,12 +314,15 @@ class UIComponents {
         if (contact.addresses && contact.addresses.length > 0) {
             html += '<div class="contact-section"><h3>Adresses</h3>';
             contact.addresses.forEach(address => {
+                const countryFlag = address.country === 'Suisse' ? '🇨🇭' : address.country;
+                const title = address.label || address.title || address.type;
+                const fullAddress = `${address.address}, ${address.postal_code} ${address.city}`;
                 html += `
                     <div class="contact-address">
-                        <span class="address-flag">${address.country}</span>
+                        <span class="address-flag">${countryFlag}</span>
                         <div class="address-details">
-                            <strong>${address.title}</strong>
-                            <p>${address.address}<br>${address.city}</p>
+                            <strong>${title}</strong>
+                            <p>${fullAddress}</p>
                         </div>
                     </div>
                 `;
@@ -328,18 +334,140 @@ class UIComponents {
         if (contact.phones && contact.phones.length > 0) {
             html += '<div class="contact-section"><h3>Téléphones</h3>';
             contact.phones.forEach(phone => {
-                html += `<p><a href="tel:${phone.replace(/\s/g, '')}">${phone}</a></p>`;
+                const phoneStr = typeof phone === 'string' ? phone : (phone.number || String(phone));
+                const label = phone.label || phone.type || '';
+                html += `<p>${label ? `<strong>${label}:</strong> ` : ''}<a href="tel:${phoneStr.replace(/\s/g, '')}">${phoneStr}</a></p>`;
             });
             html += '</div>';
         }
 
         // Email
-        if (contact.email) {
-            html += `<div class="contact-section"><h3>Email</h3><p><a href="mailto:${contact.email}">${contact.email}</a></p></div>`;
+        const emailStr = typeof contact.email === 'string' ? contact.email : contact.email?.primary;
+        if (emailStr) {
+            html += `<div class="contact-section"><h3>Email</h3><p><a href="mailto:${emailStr}">${emailStr}</a></p></div>`;
         }
 
         html += '</div>';
         window.safeHTML(container, html);
+    }
+
+    /**
+     * Rendu de la galerie
+     */
+    renderGallery() {
+        const galleryData = this.dataManager.get('gallery', 'items');
+        if (!galleryData) return;
+
+        // Rendu des filtres
+        this.renderGalleryFilters();
+        
+        // Rendu des éléments
+        this.renderGalleryItems(galleryData);
+    }
+
+    /**
+     * Rendu des filtres de galerie
+     */
+    renderGalleryFilters() {
+        const categories = this.dataManager.get('gallery', 'categories');
+        if (!categories) return;
+
+        const container = document.getElementById('gallery-filters');
+        if (!container) return;
+
+        const filtersHTML = categories.map(category => `
+            <button class="filter-btn ${category.active ? 'active' : ''}" 
+                    data-filter="${category.id}">
+                ${category.name}
+            </button>
+        `).join('');
+        
+        window.safeHTML(container, filtersHTML);
+
+        // Ajouter les événements de filtrage
+        container.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                // Retirer active de tous les boutons
+                container.querySelectorAll('.filter-btn').forEach(btn => 
+                    btn.classList.remove('active'));
+                
+                // Ajouter active au bouton cliqué
+                e.target.classList.add('active');
+                
+                // Filtrer les éléments
+                const filter = e.target.dataset.filter;
+                this.filterGalleryItems(filter);
+            }
+        });
+    }
+
+    /**
+     * Rendu des éléments de galerie
+     */
+    renderGalleryItems(items) {
+        const container = document.getElementById('gallery-grid');
+        if (!container) return;
+
+        const itemsHTML = items.map((item, index) => {
+            const mainImage = item.images && item.images.length > 0 ? item.images[0] : null;
+            const fallbackIcon = item.fallback_icon || '📸';
+            
+            return `
+                <div class="gallery-item scroll-reveal" 
+                     data-category="${item.category}"
+                     style="animation-delay: ${index * 0.1}s;">
+                    <div class="gallery-image">
+                        ${mainImage ? `
+                            <img src="${mainImage.url}" 
+                                 alt="${mainImage.alt}" 
+                                 loading="lazy"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-fallback" style="display:none;">
+                                <span class="fallback-icon">${fallbackIcon}</span>
+                            </div>
+                        ` : `
+                            <div class="image-fallback">
+                                <span class="fallback-icon">${fallbackIcon}</span>
+                            </div>
+                        `}
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn" 
+                                    onclick="window.app.openGalleryModal('${item.id}')">
+                                📸 Voir
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">${item.title}</h3>
+                        <p class="gallery-description">${item.description}</p>
+                        <div class="gallery-meta">
+                            <span class="gallery-material">${item.material}</span>
+                            <span class="gallery-duration">${item.duration}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        window.safeHTML(container, itemsHTML);
+    }
+
+    /**
+     * Filtrage des éléments de galerie
+     */
+    filterGalleryItems(filter) {
+        const items = document.querySelectorAll('.gallery-item');
+        
+        items.forEach(item => {
+            const category = item.dataset.category;
+            if (filter === 'tous' || category === filter) {
+                item.style.display = 'block';
+                item.classList.add('scroll-reveal');
+            } else {
+                item.style.display = 'none';
+                item.classList.remove('scroll-reveal');
+            }
+        });
     }
 
     /**

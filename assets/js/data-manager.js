@@ -142,9 +142,32 @@ class DataManager {
             },
             gallery: {
                 categories: [
-                    { id: "tous", name: "Tous", active: true }
+                    { id: "tous", name: "Tous", active: true },
+                    { id: "remaillage", name: "Remaillage", active: true },
+                    { id: "tissus-precieux", name: "Tissus précieux", active: true }
                 ],
-                items: []
+                items: [
+                    {
+                        id: "remaillage-pull-cachemire-1",
+                        title: "Pull cachemire - Réparation invisible",
+                        description: "Remaillage d'un trou de 2cm sur un pull en cachemire beige.",
+                        category: "tissus-precieux",
+                        fallback_icon: "📸",
+                        material: "Cachemire 100%",
+                        duration: "5 jours",
+                        images: []
+                    },
+                    {
+                        id: "bas-contention-reparation-1",
+                        title: "Bas de contention classe II",
+                        description: "Réparation d'une échelle sur bas de contention médical.",
+                        category: "bas-contention",
+                        fallback_icon: "📸",
+                        material: "Polyamide médical",
+                        duration: "2 jours",
+                        images: []
+                    }
+                ]
             },
             settings: {
                 theme: {

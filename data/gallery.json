@@ -57,7 +57,7 @@
                     "caption": "Après : réparation totalement invisible"
                 }
             ],
-            "fallback_icon": "🧶",
+            "fallback_icon": "📸",
             "service": "remaillage-fin",
             "difficulty": "expert",
             "duration": "5 jours",
@@ -94,7 +94,7 @@
                     "caption": "Après : réparation invisible, compression maintenue"
                 }
             ],
-            "fallback_icon": "🧦",
+            "fallback_icon": "📸",
             "service": "bas-contention",
             "difficulty": "expert",
             "duration": "2 jours",
@@ -131,7 +131,7 @@
                     "caption": "Après : restauration complète"
                 }
             ],
-            "fallback_icon": "👕",
+            "fallback_icon": "📸",
             "service": "remaillage-classique",
             "difficulty": "intermediate",
             "duration": "4 jours",
@@ -162,7 +162,7 @@
                     "caption": "Réparation en cours sous loupe binoculaire"
                 }
             ],
-            "fallback_icon": "🦙",
+            "fallback_icon": "📸",
             "service": "remaillage-fin",
             "difficulty": "expert",
             "duration": "6 jours",
@@ -193,7 +193,7 @@
                     "caption": "Technique de réparation préservant les propriétés médicales"
                 }
             ],
-            "fallback_icon": "🏥",
+            "fallback_icon": "📸",
             "service": "bas-contention",
             "difficulty": "expert",
             "duration": "1 jour",
@@ -224,7 +224,7 @@
                     "caption": "Remise en tension des fils et consolidation"
                 }
             ],
-            "fallback_icon": "🧣",
+            "fallback_icon": "📸",
             "service": "remaillage-fin",
             "difficulty": "intermediate",
             "duration": "3 jours",
@@ -261,7 +261,7 @@
                     "caption": "Après : réparation renforcée"
                 }
             ],
-            "fallback_icon": "👶",
+            "fallback_icon": "📸",
             "service": "remaillage-classique",
             "difficulty": "basic",
             "duration": "2 jours",
@@ -292,7 +292,7 @@
                     "caption": "Technique de restauration traditionnelle"
                 }
             ],
-            "fallback_icon": "🌸",
+            "fallback_icon": "📸",
             "service": "remaillage-fin",
             "difficulty": "master",
             "duration": "8 jours",

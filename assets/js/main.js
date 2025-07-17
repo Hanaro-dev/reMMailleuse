@@ -321,6 +321,57 @@ class RemmailleuseApp {
     }
 
     /**
+     * Ouvrir la modal de galerie
+     */
+    openGalleryModal(itemId) {
+        const galleryItems = this.dataManager.get('gallery', 'items');
+        if (!galleryItems) return;
+
+        const item = galleryItems.find(i => i.id === itemId);
+        if (!item) return;
+
+        const modal = document.getElementById('gallery-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const imageBefore = document.getElementById('modal-image-before');
+        const imageAfter = document.getElementById('modal-image-after');
+        const toggleBefore = document.getElementById('toggle-before');
+        const toggleAfter = document.getElementById('toggle-after');
+
+        // Remplir les informations
+        if (modalTitle) modalTitle.textContent = item.title;
+        if (modalDescription) modalDescription.textContent = item.description;
+
+        // Gérer les images
+        if (item.images && item.images.length > 0) {
+            const beforeImage = item.images.find(img => img.type === 'before');
+            const afterImage = item.images.find(img => img.type === 'after') || item.images[0];
+
+            if (beforeImage) {
+                imageBefore.src = beforeImage.url;
+                imageBefore.alt = beforeImage.alt;
+                imageBefore.style.display = 'block';
+                imageAfter.style.display = 'none';
+                toggleBefore?.classList.add('active');
+                toggleAfter?.classList.remove('active');
+            } else {
+                imageAfter.src = afterImage.url;
+                imageAfter.alt = afterImage.alt;
+                imageAfter.style.display = 'block';
+                imageBefore.style.display = 'none';
+                toggleAfter?.classList.add('active');
+                toggleBefore?.classList.remove('active');
+            }
+        }
+
+        // Afficher la modal
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+
+    /**
      * Recherche
      */
     setupSearch() {
